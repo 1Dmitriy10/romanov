@@ -1,0 +1,49 @@
+//==================================================Спойлер========================================
+.spoiler-js {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.spoiler-title {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    &::before {
+        content: "";
+        position: absolute;
+        display: flex;
+        width: 10px;
+        height: 1px;
+        background-color: black;
+        top: 50%;
+        transform: rotate(40deg);
+        left: 0;
+        transition: 0.3s;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        display: flex;
+        width: 10px;
+        height: 1px;
+        background-color: black;
+        top: 50%;
+        transform: rotate(-40deg);
+        left: 8px;
+        transition: 0.3s;
+    }
+    &.active {
+        transition: 0.3s;
+        &::before {
+            background-color: red;
+            transform: rotate(-40deg);
+            transition: 0.3s;
+        }
+        &::after {
+            background-color: red;
+            transform: rotate(40deg);
+            transition: 0.3s;
+        }
+    }
+}

@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: transparent;
+  background-color: transparent;
+}
+
+ul,
+summary {
+  list-style: none;
+}
+
+body {
+  height: 100%;
+}
+
+.img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+:root {
+  font-family: "san-serif";
+  --red: red;
+  --Thin: 100;
+  --ExtraLight: 200;
+  --light: 300;
+  --normal: 400;
+  --Medium: 500;
+  --SemiBold: 600;
+  --Bold: 700;
+  --ExtraBold: 800;
+  --Black: 900;
+  --font-16: 1rem;
+  --font-14: 0.875rem;
+  --font-18: 1.125rem;
+  --font-20: 1.25rem;
+  --font-24: 1.5rem;
+  --font-30: 1.875rem;
+  --font-35: 2.1875rem;
+  --font-40: 2.5rem;
+  --height: 100%;
+}
+@media (max-width: 992px) {
+  :root .container {
+    --font-20: 1rem;
+  }
+}
+p {
+  font-weight: var(--normal);
+  font-size: var(--font-20);
+  color: var(--red);
+  line-height: var(--height);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.burger-menu-wrap {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  z-index: 20;
+}
+.burger-menu-wrap:hover {
+  -webkit-transform: scale(90%);
+  -ms-transform: scale(90%);
+  transform: scale(90%);
+}
+@media (max-width: 900px) {
+  .burger-menu-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.burger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  position: relative;
+  z-index: 20;
+}
+.burger-menu::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.burger-menu::after {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: -12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.burger-menu.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 0;
+  background-color: black;
+  position: relative;
+}
+.burger-menu.active::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.burger-menu.active::after {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav_box-mob {
+  height: 100dvh;
+  padding: 25px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  background-color: #07086c;
+}
+.nav_box-mob.active {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  z-index: 10;
+}
+
+.nav_box-mob-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 30px;
+}

@@ -1,0 +1,46 @@
+//=========сетка брейкпоинтов==============
+$breakpoints: (
+    "tel": (
+        max-width: 576px,
+    ),
+    "tab": (
+        max-width: 768px,
+    ),
+    "nout": (
+        max-width: 992px,
+    ),
+    "pc-old": (
+        max-width: 1200px,
+    ),
+    "pc": (
+        max-width: 1400px,
+    ),
+);
+
+//==========переменные шрифтов===========
+
+//---------font-weight--------------
+$Thin: var(--Thin);
+$ExtraLight: var(--ExtraLight);
+$light: var(--light);
+$normal: var(--normal);
+$Medium: var(--Medium);
+$SemiBold: var(--SemiBold);
+$Bold: var(--Bold);
+$ExtraBold: var(--ExtraBold);
+$Black: var(--Black);
+//---------font-size--------------
+$font-16: var(--font-16);
+$font-14: var(--font-14);
+$font-18: var(--font-18);
+$font-20: var(--font-20);
+$font-24: var(--font-24);
+$font-30: var(--font-30);
+$font-35: var(--font-35);
+$font-40: var(--font-40);
+//----------line-height-------------
+$height: var(--height);
+
+//===========переменные цветов========
+
+$red: var(--red);

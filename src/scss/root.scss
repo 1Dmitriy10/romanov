@@ -1,0 +1,45 @@
+:root {
+    //font-family
+    font-family: "san-serif";
+    //container
+    .container {
+        @include respond-to("pc") {
+        }
+        @include respond-to("pc-old") {
+        }
+        @include respond-to("nout") {
+            --font-20: 1rem;
+        }
+        @include respond-to("tab") {
+        }
+        @include respond-to("tel") {
+        }
+    }
+
+    //===========color===========
+    --red: red;
+
+    //===========шрифты============
+
+    //---------font-weight--------------
+    --Thin: 100;
+    --ExtraLight: 200;
+    --light: 300;
+    --normal: 400;
+    --Medium: 500;
+    --SemiBold: 600;
+    --Bold: 700;
+    --ExtraBold: 800;
+    --Black: 900;
+    //---------font-size--------------
+    --font-16: 1rem;
+    --font-14: 0.875rem;
+    --font-18: 1.125rem;
+    --font-20: 1.25rem;
+    --font-24: 1.5rem;
+    --font-30: 1.875rem;
+    --font-35: 2.1875rem;
+    --font-40: 2.5rem;
+    //----------line-height-------------
+    --height: 100%;
+}

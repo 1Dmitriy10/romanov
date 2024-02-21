@@ -1,0 +1,17 @@
+//основные импорты
+// @import "fonts";
+@import "variables";
+@import "mixin";
+@import "reset";
+@import "root";
+@import "typography";
+
+//========основные стили============
+//==================================
+
+//Импорты блоков и компонентов
+// @import "./components/_spoiler";
+// @import "./components/_tabs";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/burgerMenu";
