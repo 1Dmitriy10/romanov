@@ -1,0 +1,27 @@
+.icons-box {
+    display: flex;
+    gap: 8.5px;
+}
+.icons-box_big {
+    gap: 12px;
+}
+//primary
+.social-icon {
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+    &:hover {
+        svg {
+            transform: scale(1.2);
+        }
+    }
+}
+//secondary
+.social-icon_big {
+    width: 30px;
+    height: 30px;
+}

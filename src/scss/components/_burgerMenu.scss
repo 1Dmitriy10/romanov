@@ -6,12 +6,12 @@
     background: transparent;
     display: none;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 20px;
-    z-index: 20;
+    border-radius: 100%;
+    background-color: $beige;
+    transition: 0.3s;
     &:hover {
-        transform: scale(90%);
+        transition: 0.3s;
+        transform: scale(98%);
     }
     @media (max-width: 900px) {
         display: flex;
@@ -20,74 +20,54 @@
 // Контент бургера
 .burger-menu {
     display: flex;
-    width: 40px;
-    height: 3px;
+    width: 28px;
+    height: 2px;
     background-color: black;
     position: relative;
-    z-index: 20;
+    // z-index: 20;
+    margin-top: 20px;
     &::before {
         content: "";
         display: flex;
-        width: 40px;
-        height: 3px;
+        width: 28px;
+        height: 2px;
         background-color: black;
         position: absolute;
-        top: 12px;
-        transition: 0.5s;
-    }
-    &::after {
-        content: "";
-        display: flex;
-        width: 40px;
-        height: 3px;
-        background-color: black;
-        position: absolute;
-        top: -12px;
+        top: 8px;
         transition: 0.5s;
     }
     &.active {
-        display: flex;
-        width: 40px;
-        height: 0;
-        background-color: black;
-        position: relative;
-        &::before {
-            content: "";
-            display: flex;
-            width: 40px;
-            height: 3px;
-            background-color: black;
-            position: absolute;
-            top: 0;
-            transform: rotate(45deg);
-            transition: 0.5s;
-        }
-        &::after {
-            content: "";
-            display: flex;
-            width: 40px;
-            height: 3px;
-            background-color: black;
-            position: absolute;
-            top: 0;
-            transform: rotate(-45deg);
-            transition: 0.5s;
-        }
+        // display: flex;
+        // width: 40px;
+        // height: 0;
+        // background-color: black;
+        // position: relative;
+        // &::before {
+        //     content: "";
+        //     display: flex;
+        //     width: 40px;
+        //     height: 3px;
+        //     background-color: black;
+        //     position: absolute;
+        //     top: 0;
+        //     transform: rotate(45deg);
+        //     transition: 0.5s;
+        // }
     }
 }
 // Мобильное меню
 .nav_box-mob {
     height: 100dvh;
-    padding: 25px;
+    padding: 91px 30px 60px 30px;
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     left: 0;
     top: 0;
     transition: 0.5s;
     transform: translateY(-100%);
-    background-color: #07086c;
+    background-color: $beige;
     &.active {
         transition: 0.5s;
         transform: translateY(0);
@@ -97,6 +77,5 @@
 .nav_box-mob-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    width: 100%;
 }

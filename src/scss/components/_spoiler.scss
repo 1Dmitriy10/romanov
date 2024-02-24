@@ -1,5 +1,5 @@
 //==================================================Спойлер========================================
-.spoiler-js {
+._spoiler-js {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -36,12 +36,10 @@
     &.active {
         transition: 0.3s;
         &::before {
-            background-color: red;
             transform: rotate(-40deg);
             transition: 0.3s;
         }
         &::after {
-            background-color: red;
             transform: rotate(40deg);
             transition: 0.3s;
         }

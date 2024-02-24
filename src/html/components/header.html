@@ -1,13 +1,660 @@
 <header class="header">
     <div class="container header__container">
-        <!-- Кнопка меню-бургера -->
-        <button class="burger-menu-wrap">
-            <span class="burger-menu"></span>
-        </button>
+        <div class="header__row">
+
+            <a href="/" class="logo-link header__logo-link">
+                <img src="@img/logo.png" alt="" class="logo-img">
+            </a>
+
+            <div class="address-box header__address-box">
+                <span class="address">Москва, Романов переулок, д.&nbsp;5</span>
+                <button class="address-route">Проложить маршрут</button>
+            </div>
+
+            <div class="contacts-box header__contacts-box">
+                <a href="tel:+74994441429" class="tel">+7 (499) 444 14&nbsp;29</a>
+                <span class="schedule">Ежедневно с&nbsp;10:00 до&nbsp;22:00</span>
+            </div>
+
+            <div class="icons-box header__icons-box">
+                <a href="#" class="social-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.82376 11.6832C4.85956 11.6951 4.89638 11.7037 4.93376 11.709C5.16953 12.2645 5.40397 12.8207 5.63709 13.3773C6.05626 14.379 6.47876 15.4107 6.57126 15.7073C6.68709 16.0723 6.80876 16.3207 6.94209 16.4907C7.01126 16.5773 7.09043 16.654 7.18376 16.7123C7.23238 16.7427 7.2844 16.7674 7.33876 16.7857C7.60542 16.8857 7.84876 16.844 8.00126 16.7932C8.09075 16.7626 8.1759 16.7206 8.25459 16.6682L8.25876 16.6665L10.6138 15.1982L13.3346 17.2832C13.3746 17.314 13.4179 17.3398 13.4646 17.3607C13.7913 17.5023 14.1079 17.5523 14.4063 17.5123C14.7029 17.4707 14.9388 17.3465 15.1146 17.2057C15.3165 17.0429 15.4775 16.8351 15.5846 16.599L15.5921 16.5807L15.5946 16.574L15.5963 16.5707V16.569L15.5971 16.5682C15.6116 16.5323 15.6227 16.4952 15.6304 16.4573L18.1138 3.93649C18.1216 3.89641 18.1255 3.85566 18.1254 3.81483C18.1254 3.44816 17.9871 3.09899 17.6629 2.88816C17.3846 2.70733 17.0754 2.69899 16.8796 2.71399C16.6696 2.73066 16.4746 2.78233 16.3438 2.82399C16.2705 2.8472 16.1982 2.87334 16.1271 2.90233L16.1179 2.90649L2.18959 8.36982L2.18792 8.37066C2.1408 8.38799 2.09437 8.40717 2.04876 8.42816C1.93831 8.47781 1.83236 8.53692 1.73209 8.60483C1.54292 8.73399 1.10709 9.08899 1.18126 9.67566C1.23959 10.1423 1.55959 10.4298 1.75542 10.5682C1.86209 10.644 1.96376 10.6982 2.03876 10.734C2.07209 10.7507 2.14376 10.779 2.17459 10.7923L2.18292 10.7948L4.82376 11.6832ZM16.6054 4.05649H16.6038C16.5966 4.05968 16.5894 4.06273 16.5821 4.06566L2.63709 9.53649C2.62992 9.53939 2.62269 9.54217 2.61542 9.54483L2.60709 9.54732C2.58162 9.55734 2.55659 9.56846 2.53209 9.58066C2.55529 9.59394 2.57921 9.60591 2.60376 9.61649L5.22209 10.4982C5.26888 10.5139 5.31364 10.5352 5.35542 10.5615L14.0029 5.49899L14.0113 5.49483C14.0448 5.47441 14.0793 5.45551 14.1146 5.43816C14.1746 5.40733 14.2704 5.36233 14.3788 5.32899C14.4538 5.30566 14.6763 5.23983 14.9163 5.31733C15.0436 5.35745 15.157 5.43257 15.2437 5.53409C15.3303 5.63562 15.3866 5.75947 15.4063 5.89149C15.4373 6.00712 15.4382 6.12877 15.4088 6.24483C15.3504 6.47399 15.1904 6.65233 15.0446 6.78899C14.9196 6.90566 13.2979 8.46899 11.6988 10.0123L9.52126 12.1123L9.13376 12.4873L14.0271 16.239C14.0931 16.2667 14.1649 16.2781 14.2363 16.2723C14.2722 16.2674 14.306 16.2524 14.3338 16.229C14.3675 16.2005 14.3965 16.1667 14.4196 16.129L14.4213 16.1282L16.8296 3.98399C16.7537 4.00224 16.6793 4.0262 16.6071 4.05566L16.6054 4.05649ZM9.55459 14.3848L8.57793 13.6365L8.34126 15.1407L9.55459 14.3848ZM7.68209 12.1515L8.65293 11.214L10.8304 9.11233L11.6413 8.33066L6.20792 11.5115L6.23709 11.5798C6.57976 12.3893 6.91866 13.2005 7.25376 14.0132L7.48959 12.5132C7.51093 12.374 7.57879 12.2471 7.68209 12.1515Z"
+                            fill="#EFEAE5"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.8747 4.09204C15.1107 3.32031 14.2007 2.70843 13.1977 2.29208C12.1948 1.87574 11.1189 1.66326 10.033 1.66704C5.48301 1.66704 1.77467 5.37537 1.77467 9.92537C1.77467 11.3837 2.15801 12.8004 2.87467 14.0504L1.70801 18.3337L6.08301 17.1837C7.29134 17.842 8.64967 18.192 10.033 18.192C14.583 18.192 18.2913 14.4837 18.2913 9.93371C18.2913 7.72537 17.433 5.65037 15.8747 4.09204ZM10.033 16.792C8.79967 16.792 7.59134 16.4587 6.53301 15.8337L6.28301 15.6837L3.68301 16.367L4.37467 13.8337L4.20801 13.5754C3.5228 12.4812 3.15896 11.2164 3.15801 9.92537C3.15801 6.14204 6.24134 3.05871 10.0247 3.05871C11.858 3.05871 13.583 3.77538 14.8747 5.07538C15.5142 5.71201 16.0211 6.46926 16.3658 7.30323C16.7106 8.1372 16.8864 9.0313 16.883 9.93371C16.8997 13.717 13.8163 16.792 10.033 16.792ZM13.7997 11.6587C13.5913 11.5587 12.5747 11.0587 12.3913 10.9837C12.1997 10.917 12.0663 10.8837 11.9247 11.0837C11.783 11.292 11.3913 11.7587 11.2747 11.892C11.158 12.0337 11.033 12.0504 10.8247 11.942C10.6163 11.842 9.94967 11.617 9.16634 10.917C8.54967 10.367 8.14134 9.69204 8.01634 9.48371C7.89967 9.27537 7.99967 9.16704 8.10801 9.05871C8.19967 8.96704 8.31634 8.81704 8.41634 8.70037C8.51634 8.58371 8.55801 8.49204 8.62467 8.35871C8.69134 8.21704 8.65801 8.10038 8.60801 8.00038C8.55801 7.90038 8.14134 6.88371 7.97467 6.46704C7.80801 6.06704 7.63301 6.11704 7.50801 6.10871H7.10801C6.96634 6.10871 6.74967 6.15871 6.55801 6.36704C6.37467 6.57538 5.84134 7.07538 5.84134 8.09204C5.84134 9.10871 6.58301 10.092 6.68301 10.2254C6.78301 10.367 8.14134 12.4504 10.208 13.342C10.6997 13.5587 11.083 13.6837 11.383 13.7754C11.8747 13.9337 12.3247 13.9087 12.683 13.8587C13.083 13.8004 13.908 13.3587 14.0747 12.8754C14.2497 12.392 14.2497 11.9837 14.1913 11.892C14.133 11.8004 14.008 11.7587 13.7997 11.6587Z"
+                            fill="#EFEAE5"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="input-search-box header__input-search-box">
+                <input class="input input-search" type="serch" placeholder="Поиск...">
+                <div class="input-search-icon">
+                    <svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                            Created with Pixso.
+                        </desc>
+                        <defs></defs>
+                        <path id="Vector"
+                            d="M14.7559 16L9.15527 10.3999C8.71094 10.7554 8.2002 11.0371 7.62207 11.2446C7.04492 11.4517 6.42969 11.5557 5.77734 11.5557C4.16309 11.5557 2.79688 10.9961 1.67773 9.87744C0.55957 8.7583 0.000976562 7.39209 0 5.77783C0 4.16309 0.55957 2.79639 1.67773 1.67822C2.79688 0.560059 4.16309 0.000488281 5.77734 0C7.39258 0 8.75977 0.55957 9.87793 1.67822C10.9971 2.79688 11.5557 4.16357 11.5557 5.77783C11.5557 6.42969 11.4521 7.04443 11.2441 7.62207C11.0371 8.2002 10.7559 8.71094 10.4004 9.15576L16 14.7554L14.7559 16ZM5.77734 9.77783C6.88867 9.77783 7.83301 9.38916 8.61133 8.61133C9.38965 7.83398 9.77832 6.88965 9.77734 5.77783C9.77734 4.6665 9.38867 3.72217 8.61133 2.94482C7.83398 2.16748 6.88965 1.77832 5.77734 1.77783C4.66699 1.77783 3.72266 2.16699 2.94531 2.94482C2.16699 3.72314 1.77832 4.66748 1.77734 5.77783C1.77734 6.88867 2.16699 7.8335 2.94531 8.61133C3.72266 9.38965 4.66699 9.77832 5.77734 9.77783Z"
+                            fill="#D0CBBE" fill-opacity="1.000000" fill-rule="nonzero"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="btn-sign-up-box">
+                <button class="btn btn-sign-up">Записаться онлайн</button>
+                <div class="btn-sign-up-icon">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.0648 14.4097L13.5281 14.4198L13.5281 8.05181L5.28182 16.298L4.17696 15.1932L12.4232 6.94696L6.06526 6.957V5.41021H15.0648V14.4097Z"
+                            fill="#EFEAE5"></path>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+        <div class="header__row header__row_white">
+
+            <div class="nav">
+                <ul class="nav-list">
+                    <!-- Решение проблем -->
+                    <li class="nav-item btn btn-regular">
+                        <a href="#" class="nav-link">Решение проблем</a>
+                        <!-- 2 уровень -->
+                        <div class="nav-2lv first__nav-2lv">
+                            <ul class="nav-list-2lv">
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Внутренние органы</a>
+                                    <!-- 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Тело</a>
+                                    <!-- 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">test-1</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">test-2</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">test-3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Ментальное здоровье</a>
+                                    <!-- 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Лицо</a>
+                                    <!-- 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Корпоративные
+                                        программы</a>
+                                    <!--3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Все программы</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- конец 2 уровень -->
+                    </li>
+                    <!-- О клинике -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">О&nbsp;клинике</a>
+                        <!-- 2 уровень -->
+                        <div class="nav-2lv">
+                            <ul class="nav-list-2lv">
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Миссия</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Особенности подхода</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Галерея</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">СМИ о&nbsp;нас</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Блог </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Услуги -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Услуги</a>
+                        <!-- 2 уровень -->
+                        <div class="nav-2lv">
+                            <ul class="nav-list-2lv">
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Бьюти-менторинг
+                                        и&nbsp;стратегии долголетия</a>
+                                    <!-- 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Консультации
+                                                    и&nbsp;ведение</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Карта
+                                                    питания</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Стратегия
+                                                    долголетия</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Диагностика</a>
+                                    <!-- 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">test-1</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">test-2</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">test-3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Гармонизация внешности</a>
+                                    <!-- 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Ресурсная терапия</a>
+                                    <!-- конец 3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Реабилитация
+                                        и&nbsp;коррекция фигуры</a>
+                                    <!--3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Антистресс-программы</a>
+                                    <!--3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Оздоровительный
+                                        комплекс</a>
+                                    <!--3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Косметология</a>
+                                    <!--3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Салонные услуги</a>
+                                    <!--3 уровень -->
+                                    <div class="nav-3lv">
+                                        <ul class="nav-list-3lv">
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Здоровый
+                                                    кишечник</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Крепкий
+                                                    иммунитет</a>
+                                            </li>
+                                            <li class="nav-item-lv-3">
+                                                <a href="#" class="nav-link nav-link-lv-3 link-underline">Лечение
+                                                    головных болей</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- конец 3 уровень -->
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Все услуги</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- конец 2 уровень -->
+                    </li>
+                    <!-- Команда -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Команда</a>
+                    </li>
+                    <!-- Бьюти-клуб -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Бьюти-клуб</a>
+                        <!-- 2 уровень -->
+                        <div class="nav-2lv">
+                            <ul class="nav-list-2lv">
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Романов Beauty Club</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Программа лоялбности</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Консьерж-сервис</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Депозиты</a>
+                                </li>
+                                <li class="nav-item-lv-2">
+                                    <a href="#" class="nav-link nav-link-lv-2 link-underline">Бонусная система</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Контакты -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#" class="btn btn-regular _btn-underline-js header__btn-regular">
+                <span class="_underline-js">сертификаты</span>
+            </a>
+
+            <a href="#" class="btn btn-regular btn-regular_secondary _btn-underline-js header__btn-regular">
+                <span class="_underline-js">интернет-магазин</span>
+            </a>
+
+        </div>
+
+        <!--мобильное меню  -->
+
+        <div class="header__mob-row">
+            <a href="/" class="logo-link header__logo-link">
+                <img src="@img/logo.png" alt="" class="logo-img">
+            </a>
+            <!-- Кнопка меню-бургера -->
+            <button class="burger-menu-wrap">
+                <span class="burger-menu"></span>
+            </button>
+
+            <!-- обертка меню -->
+            <nav class="nav_box-mob">
+                <div class="nav_box-mob-list">
+
+                    <button class="burger-menu-wrap burger-menu-wrap-exit">
+                        <span class="burger-menu burger-menu-exit"></span>
+                    </button>
+                    <!-- меню 1 уровень -->
+                    <ul class="mob-nav-list">
+                        <li class="_header-spoiler-js">
+                            <a href="#" class="mob-nav-item link-underline">Решение проблем</a>
+                            <!-- меню 2 уровень -->
+                            <ul class="mob-nav-list-lv-2">
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2 link-underline">Внутренние органы</a>
+                                    <!--меню 3 уровень  -->
+                                    <ul class="mob-nav-list-lv-3">
+                                        <li class="">
+                                            <a href="#" class="mob-nav-item-lv-3 link-underline">Здоровый кишечник</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="mob-nav-item-lv-3 link-underline">Здоровый кишечник</a>
+                                        </li>
+                                    </ul>
+                                    <!--меню 3 уровень конец -->
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Тело</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Ментальное здоровье</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Лицо</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Корпоративные программы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Все программы</a>
+                                </li>
+                            </ul>
+                            <a class="test" href="#">перейти</a>
+                            <!-- меню 2 уровень -->
+                        </li>
+
+                        <li class="_header-spoiler-js">
+                            <a href="#" class="mob-nav-item link-underline">О клинике</a>
+                            <!-- меню 2 уровень -->
+                            <ul class="mob-nav-list-lv-2">
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2 link-underline">Внутренние органы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2 link-underline">Тело</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2 link-underline">Ментальное здоровье</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2 link-underline">Лицо</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2 link-underline">Корпоративные программы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2 link-underline">Все программы</a>
+                                </li>
+                            </ul>
+                            <!-- меню 2 уровень -->
+                        </li>
+
+                        <li class="_header-spoiler-js">
+                            <a href="#" class="mob-nav-item link-underline">Услуги</a>
+                            <!-- меню 2 уровень -->
+                            <ul class="mob-nav-list-lv-2">
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Внутренние органы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Тело</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Ментальное здоровье</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Лицо</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Корпоративные программы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Все программы</a>
+                                </li>
+                            </ul>
+                            <!-- меню 2 уровень -->
+                        </li>
+
+                        <li class="_header-spoiler-js">
+                            <a href="#" class="mob-nav-item link-underline">Команда</a>
+                            <!-- меню 2 уровень -->
+                            <ul class="mob-nav-list-lv-2">
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Внутренние органы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Тело</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Ментальное здоровье</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Лицо</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Корпоративные программы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Все программы</a>
+                                </li>
+                            </ul>
+                            <!-- меню 2 уровень -->
+                        </li>
+
+                        <li class="_header-spoiler-js">
+                            <a href="#" class="mob-nav-item link-underline">Бьюти-клуб</a>
+                            <!-- меню 2 уровень -->
+                            <ul class="mob-nav-list-lv-2">
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Внутренние органы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Тело</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Ментальное здоровье</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Лицо</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Корпоративные программы</a>
+                                </li>
+                                <li class="_header-spoiler-js">
+                                    <a href="#" class="mob-nav-item-lv-2">Все программы</a>
+                                </li>
+                            </ul>
+                            <!-- меню 2 уровень -->
+                        </li>
+
+                        <li class="_header-spoiler-js">
+                            <a href="#" class="mob-nav-item link-underline">Контакты</a>
+                        </li>
+                    </ul>
+                    <!-- меню 1 уровень конец -->
+                    <div class="mob-menu-btn-wrap">
+                        <a href="#" class="btn btn-regular _btn-underline-js header__btn-regular_mob">
+                            <span class="_underline-js">сертификаты</span>
+                        </a>
+
+                        <a href="#"
+                            class="btn btn-regular btn-regular_secondary _btn-underline-js header__btn-regular_mob">
+                            <span class="_underline-js">интернет-магазин</span>
+                        </a>
+                    </div>
+
+                    <div class="icons-box header__icons-box_mob">
+                        <a href="#" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.82376 11.6832C4.85956 11.6951 4.89638 11.7037 4.93376 11.709C5.16953 12.2645 5.40397 12.8207 5.63709 13.3773C6.05626 14.379 6.47876 15.4107 6.57126 15.7073C6.68709 16.0723 6.80876 16.3207 6.94209 16.4907C7.01126 16.5773 7.09043 16.654 7.18376 16.7123C7.23238 16.7427 7.2844 16.7674 7.33876 16.7857C7.60542 16.8857 7.84876 16.844 8.00126 16.7932C8.09075 16.7626 8.1759 16.7206 8.25459 16.6682L8.25876 16.6665L10.6138 15.1982L13.3346 17.2832C13.3746 17.314 13.4179 17.3398 13.4646 17.3607C13.7913 17.5023 14.1079 17.5523 14.4063 17.5123C14.7029 17.4707 14.9388 17.3465 15.1146 17.2057C15.3165 17.0429 15.4775 16.8351 15.5846 16.599L15.5921 16.5807L15.5946 16.574L15.5963 16.5707V16.569L15.5971 16.5682C15.6116 16.5323 15.6227 16.4952 15.6304 16.4573L18.1138 3.93649C18.1216 3.89641 18.1255 3.85566 18.1254 3.81483C18.1254 3.44816 17.9871 3.09899 17.6629 2.88816C17.3846 2.70733 17.0754 2.69899 16.8796 2.71399C16.6696 2.73066 16.4746 2.78233 16.3438 2.82399C16.2705 2.8472 16.1982 2.87334 16.1271 2.90233L16.1179 2.90649L2.18959 8.36982L2.18792 8.37066C2.1408 8.38799 2.09437 8.40717 2.04876 8.42816C1.93831 8.47781 1.83236 8.53692 1.73209 8.60483C1.54292 8.73399 1.10709 9.08899 1.18126 9.67566C1.23959 10.1423 1.55959 10.4298 1.75542 10.5682C1.86209 10.644 1.96376 10.6982 2.03876 10.734C2.07209 10.7507 2.14376 10.779 2.17459 10.7923L2.18292 10.7948L4.82376 11.6832ZM16.6054 4.05649H16.6038C16.5966 4.05968 16.5894 4.06273 16.5821 4.06566L2.63709 9.53649C2.62992 9.53939 2.62269 9.54217 2.61542 9.54483L2.60709 9.54732C2.58162 9.55734 2.55659 9.56846 2.53209 9.58066C2.55529 9.59394 2.57921 9.60591 2.60376 9.61649L5.22209 10.4982C5.26888 10.5139 5.31364 10.5352 5.35542 10.5615L14.0029 5.49899L14.0113 5.49483C14.0448 5.47441 14.0793 5.45551 14.1146 5.43816C14.1746 5.40733 14.2704 5.36233 14.3788 5.32899C14.4538 5.30566 14.6763 5.23983 14.9163 5.31733C15.0436 5.35745 15.157 5.43257 15.2437 5.53409C15.3303 5.63562 15.3866 5.75947 15.4063 5.89149C15.4373 6.00712 15.4382 6.12877 15.4088 6.24483C15.3504 6.47399 15.1904 6.65233 15.0446 6.78899C14.9196 6.90566 13.2979 8.46899 11.6988 10.0123L9.52126 12.1123L9.13376 12.4873L14.0271 16.239C14.0931 16.2667 14.1649 16.2781 14.2363 16.2723C14.2722 16.2674 14.306 16.2524 14.3338 16.229C14.3675 16.2005 14.3965 16.1667 14.4196 16.129L14.4213 16.1282L16.8296 3.98399C16.7537 4.00224 16.6793 4.0262 16.6071 4.05566L16.6054 4.05649ZM9.55459 14.3848L8.57793 13.6365L8.34126 15.1407L9.55459 14.3848ZM7.68209 12.1515L8.65293 11.214L10.8304 9.11233L11.6413 8.33066L6.20792 11.5115L6.23709 11.5798C6.57976 12.3893 6.91866 13.2005 7.25376 14.0132L7.48959 12.5132C7.51093 12.374 7.57879 12.2471 7.68209 12.1515Z"
+                                    fill="#756e4a"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.8747 4.09204C15.1107 3.32031 14.2007 2.70843 13.1977 2.29208C12.1948 1.87574 11.1189 1.66326 10.033 1.66704C5.48301 1.66704 1.77467 5.37537 1.77467 9.92537C1.77467 11.3837 2.15801 12.8004 2.87467 14.0504L1.70801 18.3337L6.08301 17.1837C7.29134 17.842 8.64967 18.192 10.033 18.192C14.583 18.192 18.2913 14.4837 18.2913 9.93371C18.2913 7.72537 17.433 5.65037 15.8747 4.09204ZM10.033 16.792C8.79967 16.792 7.59134 16.4587 6.53301 15.8337L6.28301 15.6837L3.68301 16.367L4.37467 13.8337L4.20801 13.5754C3.5228 12.4812 3.15896 11.2164 3.15801 9.92537C3.15801 6.14204 6.24134 3.05871 10.0247 3.05871C11.858 3.05871 13.583 3.77538 14.8747 5.07538C15.5142 5.71201 16.0211 6.46926 16.3658 7.30323C16.7106 8.1372 16.8864 9.0313 16.883 9.93371C16.8997 13.717 13.8163 16.792 10.033 16.792ZM13.7997 11.6587C13.5913 11.5587 12.5747 11.0587 12.3913 10.9837C12.1997 10.917 12.0663 10.8837 11.9247 11.0837C11.783 11.292 11.3913 11.7587 11.2747 11.892C11.158 12.0337 11.033 12.0504 10.8247 11.942C10.6163 11.842 9.94967 11.617 9.16634 10.917C8.54967 10.367 8.14134 9.69204 8.01634 9.48371C7.89967 9.27537 7.99967 9.16704 8.10801 9.05871C8.19967 8.96704 8.31634 8.81704 8.41634 8.70037C8.51634 8.58371 8.55801 8.49204 8.62467 8.35871C8.69134 8.21704 8.65801 8.10038 8.60801 8.00038C8.55801 7.90038 8.14134 6.88371 7.97467 6.46704C7.80801 6.06704 7.63301 6.11704 7.50801 6.10871H7.10801C6.96634 6.10871 6.74967 6.15871 6.55801 6.36704C6.37467 6.57538 5.84134 7.07538 5.84134 8.09204C5.84134 9.10871 6.58301 10.092 6.68301 10.2254C6.78301 10.367 8.14134 12.4504 10.208 13.342C10.6997 13.5587 11.083 13.6837 11.383 13.7754C11.8747 13.9337 12.3247 13.9087 12.683 13.8587C13.083 13.8004 13.908 13.3587 14.0747 12.8754C14.2497 12.392 14.2497 11.9837 14.1913 11.892C14.133 11.8004 14.008 11.7587 13.7997 11.6587Z"
+                                    fill="#756e4a"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="contacts-box header__contacts-box_mob">
+                        <a href="tel:+74994441429" class="tel mob-tel">+7 (499) 444 14&nbsp;29</a>
+                        <span class="schedule mob-schedule">Ежедневно с&nbsp;10:00 до&nbsp;22:00</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
     </div>
 </header>
-<!--  -->
-<nav class="nav_box-mob">
-    <div class="nav_box-mob-list">
-    </div>
-</nav>

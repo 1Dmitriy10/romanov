@@ -1,5 +1,8 @@
 //=========сетка брейкпоинтов==============
 $breakpoints: (
+    "tel-old": (
+        max-width: 420px,
+    ),
     "tel": (
         max-width: 576px,
     ),
@@ -20,27 +23,51 @@ $breakpoints: (
 //==========переменные шрифтов===========
 
 //---------font-weight--------------
-$Thin: var(--Thin);
-$ExtraLight: var(--ExtraLight);
-$light: var(--light);
-$normal: var(--normal);
-$Medium: var(--Medium);
-$SemiBold: var(--SemiBold);
-$Bold: var(--Bold);
-$ExtraBold: var(--ExtraBold);
-$Black: var(--Black);
+$w100: var(--Thin);
+$w200: var(--ExtraLight);
+$w300: var(--light);
+$w400: var(--normal);
+$w500: var(--Medium);
+$w600: var(--SemiBold);
+$w700: var(--Bold);
+$w800: var(--ExtraBold);
+$w900: var(--Black);
 //---------font-size--------------
 $font-16: var(--font-16);
 $font-14: var(--font-14);
 $font-18: var(--font-18);
 $font-20: var(--font-20);
 $font-24: var(--font-24);
+$font-22: var(--font-22);
+$font-28: var(--font-28);
 $font-30: var(--font-30);
 $font-35: var(--font-35);
+$font-36: var(--font-36);
 $font-40: var(--font-40);
+$font-68: var(--font-68);
+$font-52: var(--font-52);
+$font-38: var(--font-38);
 //----------line-height-------------
 $height: var(--height);
+$height-83: var(--height-83);
+$height-63: var(--height-63);
+$height-46: var(--height-46);
+$height-44: var(--height-44);
+$height-34: var(--height-34);
+$height-24: var(--height-24);
+$height-29: var(--height-29);
+$height-27: var(--height-27);
+$height-22: var(--height-22);
+$height-20: var(--height-20);
 
+//----------font-family-------------
+$title: var(--font-family-title);
+$text: var(--font-family-text);
 //===========переменные цветов========
 
-$red: var(--red);
+$black: var(--primary-black);
+$beige: var(--primary-beige);
+$secondary50: var(--secondary-50);
+$primary20: var(--primary-20);
+$brown: var(--primary-brown);
+$btn: var(--primary-btn);

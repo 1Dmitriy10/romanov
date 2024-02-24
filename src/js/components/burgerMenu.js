@@ -1,14 +1,16 @@
 //   ===================================================Бургер меню=======================================================
 export function getMobMenu() {
     let burgerMenuBTN = document.querySelector('.burger-menu-wrap');
+    let exitBurgerMenuBTN = document.querySelector('.burger-menu-wrap-exit');
     let burgerMenu = document.querySelector('.burger-menu');
     let menu = document.querySelector('.nav_box-mob');
     let navLinks = document.querySelectorAll('.nav__link');
     let body = document.querySelector('body');
 
-    burgerMenuBTN.addEventListener('click', actionMenu);
+    burgerMenuBTN.addEventListener('click', openMenu);
+    exitBurgerMenuBTN.addEventListener('click', closeMenu);
 
-    function actionMenu() {
+    function openMenu() {
         //если меню открыто
         if (menu.className == "nav_box-mob active") {
             body.style.cssText = `overflow: auto`;
@@ -29,5 +31,12 @@ export function getMobMenu() {
             });
         });
     }
+
+    function closeMenu() {
+        menu.classList.remove('active');
+        burgerMenu.classList.remove('active');
+        body.style.cssText = `overflow: auto`;
+    }
+
 }
 getMobMenu()

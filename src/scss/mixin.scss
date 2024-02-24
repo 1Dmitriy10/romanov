@@ -27,14 +27,13 @@
 
 // =========================================Функции=====================================================
 
-//перевод в em
-@function em($px, $size) {
-    $result: $px / $size + em;
-    @return $result;
-}
+// //перевод в rem
+// @function rem($size) {
+//     @return $size / 16px * 1rem;
+// }
 
-//перевод в rem
-@function rem($px) {
+// перевод в rem
+@function r($px) {
     $result: $px / 16 + rem;
     @return $result;
 }

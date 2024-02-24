@@ -1,3 +1,70 @@
+h1 {
+    font-family: $title;
+    @include font($w400, $font-68, $black, $height-83);
+    margin-bottom: 20px;
+    letter-spacing: -0.06px;
+    text-transform: uppercase;
+    @include respond-to("nout") {
+        @include font($w400, $font-52, $black, $height-63);
+    }
+    @include respond-to("tel") {
+        @include font($w400, $font-36, $black, $height-44);
+    }
+}
+
+h2 {
+    font-family: $title;
+    @include font($w400, $font-52, $black, $height-63);
+    margin-bottom: 42px;
+    letter-spacing: -0.06px;
+    text-transform: uppercase;
+    @include respond-to("nout") {
+        @include font($w400, $font-35, $black, $height-44);
+    }
+    @include respond-to("tel") {
+        @include font($w400, $font-28, $black, $height-34);
+    }
+}
+
+h3 {
+    font-family: $title;
+    @include font($w400, $font-38, $black, $height-46);
+    letter-spacing: -0.06px;
+    margin-bottom: 42px;
+    @include respond-to("nout") {
+        @include font($w400, $font-30, $black, $height-34);
+    }
+    @include respond-to("tel") {
+        @include font($w400, $font-20, $black, $height-24);
+    }
+}
+
+.btn {
+    font-family: $text;
+    @include font($w500, $font-16, $black, $height-20);
+    letter-spacing: -0.1em;
+    @include respond-to("pc-old") {
+        @include font($w500, $font-14, $black, $height-20);
+    }
+}
+
+.h4 {
+    font-family: $text;
+    @include font($w500, $font-24, $black, $height-29);
+    letter-spacing: -0.06px;
+    @include respond-to("tel") {
+        @include font($w500, $font-20, $black, $height-24);
+    }
+}
+
 p {
-    @include font($normal, $font-20, $red, $height);
+    font-family: $text;
+    @include font($w400, $font-24, $black, $height-29);
+    letter-spacing: -0.06px;
+    @include respond-to("tel") {
+        @include font($w400, $font-20, $black, $height-24);
+    }
+}
+.ceremonious {
+    font-family: "Ceremonious One Regular";
 }

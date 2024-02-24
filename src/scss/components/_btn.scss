@@ -1,0 +1,148 @@
+//кнопка записаться онлайн
+.btn-sign-up-box {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+.btn-sign-up {
+    padding: 10px 39px 10px 0;
+    border-bottom: 1px solid $beige;
+    text-transform: uppercase;
+    color: $beige;
+    @media (max-width: 1240px) {
+        font-size: $font-14;
+    }
+    @include respond-to("nout") {
+        padding: 10px 25px 10px 0;
+    }
+}
+.btn-sign-up-icon {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 24px;
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//кнопка стандартная
+.btn-regular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 10px;
+    min-width: 195px;
+    border: 1px solid $black;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+//кнопка стандартная вторая
+
+.btn-regular_secondary {
+    color: $beige;
+    background-color: $primary20;
+    border: 1px solid transparent;
+}
+
+//кнопка стандартная третья
+.btn-regular_third {
+    background-color: $brown;
+    border: 1px solid transparent;
+    letter-spacing: -0.06em;
+    @include font($w400, $font-20, $beige, $height-24);
+    // width: auto;
+}
+
+//кнопка с кругом
+.btn-circle-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    &:hover {
+        & .btn-circle-circle {
+            transition: 0.3s;
+            width: 5rem;
+            height: 5rem;
+            transform: translateX(10px);
+        }
+    }
+}
+.btn-circle {
+    position: relative;
+    z-index: 1;
+    @include font($w500, $font-24, $black, $height-29);
+    text-transform: uppercase;
+    letter-spacing: -0.06em;
+}
+.btn-circle-circle {
+    position: absolute;
+    right: -45px;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.88rem;
+    height: 3.88rem;
+    border-radius: 100%;
+    background: $btn;
+    transition: 0.3s;
+}
+
+//кнопка с кругом белая
+.btn-circle_white {
+    color: $beige;
+}
+.btn-circle-circle_white {
+    right: -38px;
+    padding-right: 10px;
+    justify-content: flex-end;
+}
+
+//кнопка 2 с кругом белая
+.btn-circle-box_green {
+    &:hover {
+        & .btn-circle-circle {
+            width: 3.5rem;
+            height: 3.5rem;
+            transform: translateX(5px);
+        }
+    }
+}
+.btn-circle_green {
+    color: $beige;
+    font-size: $font-16;
+}
+.btn-circle-circle_green {
+    right: -34px;
+    width: 3.2rem;
+    height: 3.13rem;
+    padding-right: 15.5px;
+    justify-content: flex-end;
+    background-color: $primary20;
+}
+//кнопка 2 с кругом черная
+.btn-circle_green_black {
+    color: $black;
+}
+//js анимация
+._btn-underline-js {
+    &:hover {
+        & ._underline-js {
+            background-size: 100% 1.5px;
+        }
+    }
+}
+._underline-js {
+    text-transform: uppercase;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1.5px;
+    transition: background-size 0.3s;
+}
