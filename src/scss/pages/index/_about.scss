@@ -1,0 +1,200 @@
+.about {
+}
+.about__container {
+    display: flex;
+    flex-direction: column;
+}
+.about__up-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 117px;
+    @include respond-to("pc-old") {
+        flex-direction: column-reverse;
+        gap: 145px;
+    }
+    @include respond-to("tab") {
+        gap: 90px;
+        margin-bottom: 66px;
+    }
+}
+.about__content-box {
+    flex: 0 1 57.5%;
+}
+.about__title {
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+.about__title-mob {
+    display: none;
+    @include respond-to("tab") {
+        display: block;
+        text-align: center;
+        font-size: $font-35;
+    }
+}
+.about__subtitle {
+    font-family: $title;
+    @include font($w400, $font-36, $black, $height-34);
+    text-transform: uppercase;
+    letter-spacing: -0.06em;
+    margin-bottom: 20px;
+    @include respond-to("tab") {
+        @include font($w500, $font-20, $black, $height-24);
+        margin-bottom: 15px;
+    }
+}
+.about__text {
+}
+.about__advent-box {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 83px;
+    @include respond-to("tab") {
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
+}
+.about__advent-item {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.about__advent-item-num {
+    font-family: $title;
+    @include font($w400, $font-80, $black, $height-97);
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+}
+.about__advent-item-text {
+    @include font($w400, $font-16, $black, $height-20);
+    letter-spacing: -0.06em;
+}
+.about__video-box {
+    flex: 0 1 41.5%;
+    display: flex;
+    justify-content: flex-end;
+    @include respond-to("pc-old") {
+        flex: 0 1 100%;
+        justify-content: center;
+    }
+    @include respond-to("tab") {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+}
+.about__video-wrap {
+    position: relative;
+    display: flex;
+    margin-top: 65px;
+    height: fit-content;
+    @include respond-to("pc-old") {
+        margin-top: 0;
+    }
+    @include respond-to("tab") {
+        width: fit-content;
+    }
+}
+.about__video-wrap-img {
+    position: relative;
+    width: 420px;
+    height: 548px;
+    border-radius: 30px;
+    @include respond-to("tab") {
+        width: 232px;
+        height: 303px;
+    }
+}
+.about-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.about__video-box-wrap {
+    position: absolute;
+    border-radius: 21.7px;
+    background: rgb(39, 39, 39);
+    width: 268px;
+    height: 179.03px;
+    bottom: -123px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond-to("tab") {
+        left: 50%;
+        width: 156px;
+        height: 104.21px;
+        bottom: -50px;
+        left: 100%;
+    }
+    @include respond-to("tel-old") {
+        left: 80%;
+    }
+}
+.about__video-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: $grey;
+    width: 64px;
+    height: 64px;
+    padding-left: 5px;
+    transition: 0.3s;
+    &:hover {
+        transition: 0.3s;
+        background: $beige;
+        & svg {
+            transition: 0.3s;
+            fill: $primary20;
+        }
+        & svg > path {
+            transition: 0.3s;
+            fill: $primary20;
+        }
+    }
+}
+.about__down-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include respond-to("tab") {
+        gap: 10px;
+    }
+}
+.about__card-box {
+}
+.about__card {
+    flex: 0 1 calc((100% - 3 * 30px) / 4);
+    padding: 33px;
+    align-items: center;
+    @include respond-to("pc-old") {
+        flex: 0 1 calc((100% - 2 * 30px) / 3);
+        padding: 25px;
+    }
+    @include respond-to("tab") {
+        flex: 0 1 calc((100% - 2 * 10px) / 2);
+        padding: 23px;
+    }
+    @include respond-to("tel-old") {
+        flex: 0 1 100%;
+    }
+}
+.about__wrap-card-icon {
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 100%;
+    background-color: $beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__card-title {
+}

@@ -60,10 +60,14 @@ h3 {
 
 p {
     font-family: $text;
-    @include font($w400, $font-24, $black, $height-29);
+    @include font($w400, $font-20, $black, $height-20);
     letter-spacing: -0.06px;
+    &:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
     @include respond-to("tel") {
-        @include font($w400, $font-20, $black, $height-24);
+        @include font($w400, $font-14, $black, $height-17);
     }
 }
 .ceremonious {
