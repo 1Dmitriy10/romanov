@@ -1,0 +1,69 @@
+.quote {
+}
+.quote__container {
+}
+.quote__text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include font($w400, $font-38, $black, $height-46);
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 25px;
+    &::before {
+        content: url("../img/quote/kavychki.png");
+        position: relative;
+        width: 26px;
+        height: 24px;
+        top: 10px;
+        left: -25px;
+    }
+    &::after {
+        content: url("../img/quote/kavychki.png");
+        position: relative;
+        margin-top: auto;
+        width: 26px;
+        height: 24px;
+        transform: rotate(180deg);
+        margin-left: auto;
+        top: -10px;
+        right: -25px;
+    }
+    @include respond-to("nout") {
+        @include font($w400, $font-30, $black, $height-34);
+    }
+    @include respond-to("tab") {
+        @include font($w500, $font-21, $black, $height-24);
+        padding: 0;
+        &::before {
+            content: none;
+        }
+        &::after {
+            content: none;
+        }
+    }
+}
+.quote__text_lite {
+    @include respond-to("tab") {
+        font-family: $text;
+        @include font($w400, $font-14, $black, $height-17);
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 23px;
+        position: relative;
+        align-items: center;
+        &::before {
+            content: url("../img/quote/quote-zvezda.png");
+            width: 13px;
+            height: 13px;
+            position: absolute;
+            top: 0;
+        }
+        & svg {
+            fill: $black;
+        }
+    }
+}

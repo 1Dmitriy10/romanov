@@ -79,6 +79,7 @@ span {
   --font-14: 0.875rem;
   --font-18: 1.125rem;
   --font-20: 1.25rem;
+  --font-21: 1.31rem;
   --font-24: 1.5rem;
   --font-22: 1.38rem;
   --font-28: 1.75rem;
@@ -286,7 +287,6 @@ body {
 }
 
 main {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +294,13 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 75px;
+  gap: 150px;
+  background-color: var(--primary-beige);
+}
+@media (max-width: 768px) {
+  main {
+    gap: 120px;
+  }
 }
 
 svg {
@@ -1866,5 +1872,102 @@ svg {
     font-size: var(--font-12);
     color: var(--primary-beige);
     line-height: var(--height-17);
+  }
+}
+
+.quote__text {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: var(--normal);
+  font-size: var(--font-38);
+  color: var(--primary-black);
+  line-height: var(--height-46);
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0 25px;
+}
+.quote__text::before {
+  content: url("../img/quote/kavychki.png");
+  position: relative;
+  width: 26px;
+  height: 24px;
+  top: 10px;
+  left: -25px;
+}
+.quote__text::after {
+  content: url("../img/quote/kavychki.png");
+  position: relative;
+  margin-top: auto;
+  width: 26px;
+  height: 24px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: auto;
+  top: -10px;
+  right: -25px;
+}
+@media (max-width: 992px) {
+  .quote__text {
+    font-weight: var(--normal);
+    font-size: var(--font-30);
+    color: var(--primary-black);
+    line-height: var(--height-34);
+  }
+}
+@media (max-width: 768px) {
+  .quote__text {
+    font-weight: var(--Medium);
+    font-size: var(--font-21);
+    color: var(--primary-black);
+    line-height: var(--height-24);
+    padding: 0;
+  }
+  .quote__text::before {
+    content: none;
+  }
+  .quote__text::after {
+    content: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote__text_lite {
+    font-family: var(--font-family-text);
+    font-weight: var(--normal);
+    font-size: var(--font-14);
+    color: var(--primary-black);
+    line-height: var(--height-17);
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 23px;
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .quote__text_lite::before {
+    content: url("../img/quote/quote-zvezda.png");
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 0;
+  }
+  .quote__text_lite svg {
+    fill: var(--primary-black);
   }
 }
