@@ -128,10 +128,22 @@
             transform: translateX(5px);
         }
     }
+    @include respond-to("tab") {
+        &:hover {
+            & .btn-circle-circle {
+                width: 3rem;
+                height: 3rem;
+                transform: translateX(5px);
+            }
+        }
+    }
 }
 .btn-circle_green {
     color: $beige;
     font-size: $font-16;
+    @include respond-to("tab") {
+        @include font($w500, $font-12, $beige, $height-17);
+    }
 }
 .btn-circle-circle_green {
     right: -34px;
@@ -139,7 +151,11 @@
     height: 3.13rem;
     padding-right: 15.5px;
     justify-content: flex-end;
-    background-color: $primary20;
+    background-color: $card-green-opacity;
+    @include respond-to("tab") {
+        width: 2.7rem;
+        height: 2.7rem;
+    }
 }
 //кнопка 2 с кругом черная
 .btn-circle_green_black {

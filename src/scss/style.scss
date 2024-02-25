@@ -29,6 +29,11 @@ main {
 svg {
     transition: 0.3s;
 }
+section {
+    &:last-child {
+        padding-bottom: 75px;
+    }
+}
 //==================================
 
 //Импорты блоков и компонентов
@@ -44,3 +49,5 @@ svg {
 @import "./components/banner";
 @import "./components/quote";
 @import "./components/advantages";
+@import "./components/services";
+@import "./components/stock";

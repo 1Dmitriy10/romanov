@@ -54,3 +54,110 @@
         @include font($w400, $font-14, $black, $height-17);
     }
 }
+
+//Карточки услуг
+.services__card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.services-card {
+    flex: 0 1 calc((100% - 2 * 25px) / 3);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $primary20;
+    border-radius: 30px;
+    min-height: 456px;
+    @media (max-width: 1275px) {
+        flex: 0 1 calc((100% - 1 * 25px) / 2);
+    }
+    @include respond-to("tab") {
+        flex: 0 1 100%;
+        min-height: 348px;
+    }
+}
+.services-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 195px;
+}
+.services-card-img {
+    border-radius: 30px 30px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.services-card-img-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px 30px 0 0;
+}
+.services-card-content-box {
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @include respond-to("tab") {
+        padding: 20px 23px;
+    }
+}
+.services-card-title {
+    @include font($w500, $font-20, $black, $height-24);
+    letter-spacing: -0.06em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    @include respond-to("tab") {
+        @include font($w500, $font-16, $black, $height-17);
+    }
+}
+.services-card-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    height: 100%;
+    & > ul > li,
+    ol > li,
+    p {
+        @include font($w400, $font-18, $black, $height-20);
+        @include respond-to("tab") {
+            @include font($w400, $font-14, $black, $height-17);
+        }
+    }
+    & > ul,
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    & > ul > li > ul,
+    ol > li > ul > {
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    & > ul > li > ul > li,
+    ol > li > ul > li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        @include font($w400, $font-16, $black, $height-17);
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            background-color: $black;
+        }
+    }
+}
+.services__btn {
+    align-self: flex-end;
+    margin-right: 35px;
+}

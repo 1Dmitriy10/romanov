@@ -1,0 +1,89 @@
+.stock {
+    background-color: $brown;
+}
+.stock__container {
+    padding: 145px 0 165px 0;
+    @include respond-to("nout") {
+        padding: 125px 0 145px 0;
+    }
+    @include respond-to("nout") {
+        padding: 110px 0 110px 0;
+    }
+}
+.stock__title {
+    color: $beige;
+}
+.stock__card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.stock__card {
+    flex: 0 1 calc((100% - 2 * 30px) / 3);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 415px;
+    position: relative;
+    @include respond-to("nout") {
+        flex: 0 1 calc((100% - 1 * 30px) / 2);
+    }
+    @include respond-to("tab") {
+        flex: 0 1 100%;
+    }
+}
+.stock__card-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.stock__card-bg-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.stock__card-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding: 0 23px 50px;
+}
+.stock__card-text {
+    @include font($w400, $font-14, $beige, $height-17);
+    letter-spacing: -0.06em;
+    margin-bottom: 20px;
+    @include respond-to("tab") {
+        @include font($w400, $font-18, $beige, $height-24);
+        margin-bottom: 15px;
+        max-width: 365px;
+    }
+}
+.stock__card-prise-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 23px;
+}
+.stock__card-prise {
+    font-family: $title;
+    @include font($w600, $font-40, $beige, $height-44);
+    align-self: flex-end;
+    @include respond-to("tab") {
+        @include font($w400, $font-35, $beige, $height-34);
+    }
+}
+.stock__card-old-prise {
+    @include font($w500, $font-16, $beige, $height-20);
+}
+.stock__link {
+    @include respond-to("tab") {
+        margin-left: auto;
+        margin-right: 47px;
+    }
+}

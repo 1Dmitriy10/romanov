@@ -9,6 +9,7 @@ h2 {
     }
     @include respond-to("tel") {
         @include font($w400, $font-36, $black, $height-44);
+        margin-bottom: 25px;
     }
 }
 
@@ -27,7 +28,7 @@ h1 {
 }
 
 h3 {
-    font-family: $title;
+    font-family: $text;
     @include font($w400, $font-38, $black, $height-46);
     letter-spacing: -0.06px;
     margin-bottom: 42px;

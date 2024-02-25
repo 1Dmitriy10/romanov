@@ -4,6 +4,7 @@ import { btnUnderline } from "./components/btnUnderline.js";
 import { titleFonts } from "./components/titleFonts.js";
 import { menuItemArrow } from "./components/menuItemArrow.js";
 import { fixedHeader } from "./components/fixedHeader.js";
+import { twoColumns } from "./components/twoColumns.js";
 //Слайдер import { swiper } from "./components/slider.js";         
 //Модальные окна  import { fancybox } from "./components/fancybox.js";
 //Маска для инпутов import { mask } from "./components/mask.js";

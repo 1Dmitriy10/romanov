@@ -219,6 +219,25 @@ fixedHeader()
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   twoColumns: () => (/* binding */ twoColumns)
+/* harmony export */ });
+function twoColumns() {
+    let items = document.querySelectorAll(".two-col");
+
+    items.forEach(el => {
+        let parent = el.parentElement;
+        parent.style.cssText = `    flex-direction: row;`;
+    })
+
+}
+twoColumns()
+
+/***/ }),
+/* 8 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   spoiler: () => (/* binding */ spoiler)
 /* harmony export */ });
 // ======================================================Спойлер===================================
@@ -284,7 +303,7 @@ spoiler()
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -420,8 +439,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_titleFonts_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 /* harmony import */ var _components_menuItemArrow_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _components_fixedHeader_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _components_spoiler_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _components_headerSpoiler_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _components_twoColumns_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _components_spoiler_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _components_headerSpoiler_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+
 
 
 
