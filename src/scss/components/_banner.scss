@@ -1,0 +1,93 @@
+.banner {
+    position: relative;
+}
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner_bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner__container {
+    padding-top: 20%;
+    padding-bottom: 10.5%;
+    position: relative;
+    z-index: 10;
+    @include respond-to("pc-old") {
+        padding-top: 205px;
+        padding-bottom: 144px;
+    }
+}
+.banner__title {
+    color: $beige;
+    max-width: 860px;
+}
+.banner__subtitle {
+    @include font($w400, $font-22, $beige, $height-27);
+    max-width: 830px;
+    margin-bottom: 31px;
+    @include respond-to("tab") {
+        @include font($w400, $font-14, $beige, $height-17);
+        margin-bottom: 25px;
+    }
+}
+.banner__card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 650px;
+    margin-bottom: 49px;
+    @include respond-to("tab") {
+        gap: 10px;
+    }
+}
+.banner__card {
+    flex: 0 1 calc((100% - 1 * 20px) / (2));
+    border: 1px solid $primary20;
+    border-radius: 10px;
+    background: rgba(117, 110, 74, 0.85);
+    padding: 14px;
+    display: flex;
+    gap: 13px;
+    @include respond-to("tab") {
+        flex: 0 1 calc((100% - 1 * 10px) / (2));
+        padding: 12px;
+        gap: 6px;
+    }
+    @media (max-width: 353px) {
+        flex: 1 1 100%;
+    }
+}
+.banner__icon-wrap {
+    width: 14px;
+    height: 14px;
+}
+.banner__card-title {
+    @include font($w300, $font-16, $beige, $height-20);
+    text-transform: uppercase;
+    letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        @include font($w300, $font-12, $beige, $height-17);
+    }
+}
+.btn-circle-box {
+}
+.btn {
+}
+.btn-circle {
+}
+.btn-circle_white {
+}
+.btn-circle-circle {
+}
+.btn-circle-circle_white {
+}

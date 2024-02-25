@@ -18,6 +18,9 @@ body {
 }
 main {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
 }
 svg {
     transition: 0.3s;
@@ -33,3 +36,4 @@ svg {
 @import "./components/burgerMenu";
 @import "./components/icons";
 @import "./components/form";
+@import "./components/banner";

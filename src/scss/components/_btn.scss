@@ -71,6 +71,15 @@
             transform: translateX(10px);
         }
     }
+    @include respond-to("tab") {
+        &:hover {
+            & .btn-circle-circle {
+                width: 3.5rem;
+                height: 3.5rem;
+                transform: translateX(5px);
+            }
+        }
+    }
 }
 .btn-circle {
     position: relative;
@@ -78,6 +87,9 @@
     @include font($w500, $font-24, $black, $height-29);
     text-transform: uppercase;
     letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        @include font($w500, $font-14, $black, $height-17);
+    }
 }
 .btn-circle-circle {
     position: absolute;
@@ -89,8 +101,12 @@
     width: 3.88rem;
     height: 3.88rem;
     border-radius: 100%;
-    background: $btn;
+    background: $brown-btn;
     transition: 0.3s;
+    @include respond-to("tab") {
+        width: 3rem;
+        height: 3rem;
+    }
 }
 
 //кнопка с кругом белая
