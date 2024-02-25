@@ -1,8 +1,8 @@
 h2 {
     font-family: $title;
     @include font($w400, $font-68, $black, $height-83);
-    margin-bottom: 20px;
-    letter-spacing: -0.1em;
+    margin-bottom: 55px;
+    letter-spacing: -0.08em;
     text-transform: uppercase;
     @include respond-to("nout") {
         @include font($w400, $font-52, $black, $height-63);

@@ -1,0 +1,56 @@
+//карточка со звездой на зеленом фоне
+.primary-card {
+    flex: 0 1 calc((100% - 30px) / 2);
+    border: 1px solid $card-green;
+    border-radius: 18px;
+    background: $card-green;
+    padding: 36px 75px;
+    display: flex;
+    gap: 24px;
+    @include respond-to("pc-old") {
+        padding: 23px;
+    }
+    @include respond-to("tab") {
+        flex: 0 1 100%;
+        background: transparent;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.card__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    min-height: 38px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100%;
+    background-color: $primary20;
+    @include respond-to("tab") {
+        min-width: 23px;
+        min-height: 23px;
+    }
+}
+.card-text-box {
+    display: flex;
+    flex-direction: column;
+}
+.card-title {
+    font-family: $text;
+    @include font($w500, $font-22, $black, $height-27);
+    letter-spacing: -0.06em;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    @include respond-to("tab") {
+        @include font($w500, $font-16, $black, $height-17);
+        margin-bottom: 6px;
+    }
+}
+.card-text {
+    @include font($w400, $font-18, $black, $height-17);
+    letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        @include font($w400, $font-14, $black, $height-17);
+    }
+}
