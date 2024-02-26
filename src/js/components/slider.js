@@ -3,11 +3,12 @@
 import Swiper from 'swiper/bundle';
 import "swiper/swiper-bundle.css";
 
+//========================
 export const msmSlider = new Swiper('.msm-slider', {
     // Стрелки
     navigation: {
-        nextEl: '.msm-slider-btn-next',
-        prevEl: '.msm-slider-btn-prev',
+        nextEl: '.msm-btn-next',
+        prevEl: '.msm-btn-prev',
     },
 
 
@@ -27,6 +28,41 @@ export const msmSlider = new Swiper('.msm-slider', {
             spaceBetween: 20,
         },
         576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        }
+    },
+    // При достижении конца, перепрыгнуть в начало
+    rewind: true,
+
+});
+
+//========================
+
+export const resultSlider = new Swiper('.result-slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.result-btn-next',
+        prevEl: '.result-btn-prev',
+    },
+
+
+    /*Отступ у карточек*/
+    spaceBetween: 20,
+    /*Показывать по n карточек*/
+    slidesPerView: 1,
+
+    /*Брек-поинты*/
+    breakpoints: {
+        1430: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+        },
+        1300: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
             slidesPerView: 2,
             spaceBetween: 20,
         }

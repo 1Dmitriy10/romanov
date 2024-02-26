@@ -11,7 +11,7 @@
         height: 28px;
     }
 }
-.msm-slider-btn-prev {
+.slider-btn-prev {
     background-color: $slider-btn;
     &:active {
         background-color: $primary20;
@@ -29,7 +29,7 @@
         }
     }
 }
-.msm-slider-btn-next {
+.slider-btn-next {
     background-color: $slider-btn;
     transform: rotate(180deg);
     &:active {

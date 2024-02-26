@@ -3,6 +3,7 @@
 .quote__container {
 }
 .quote__text {
+    font-family: $title;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -228,7 +228,8 @@ twoColumns()
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   msmSlider: () => (/* binding */ msmSlider)
+/* harmony export */   msmSlider: () => (/* binding */ msmSlider),
+/* harmony export */   resultSlider: () => (/* binding */ resultSlider)
 /* harmony export */ });
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 /* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(42);
@@ -237,11 +238,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//========================
 const msmSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.msm-slider', {
     // Стрелки
     navigation: {
-        nextEl: '.msm-slider-btn-next',
-        prevEl: '.msm-slider-btn-prev',
+        nextEl: '.msm-btn-next',
+        prevEl: '.msm-btn-prev',
     },
 
 
@@ -261,6 +263,41 @@ const msmSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.ms
             spaceBetween: 20,
         },
         576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        }
+    },
+    // При достижении конца, перепрыгнуть в начало
+    rewind: true,
+
+});
+
+//========================
+
+const resultSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.result-slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.result-btn-next',
+        prevEl: '.result-btn-prev',
+    },
+
+
+    /*Отступ у карточек*/
+    spaceBetween: 20,
+    /*Показывать по n карточек*/
+    slidesPerView: 1,
+
+    /*Брек-поинты*/
+    breakpoints: {
+        1430: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+        },
+        1300: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
             slidesPerView: 2,
             spaceBetween: 20,
         }
