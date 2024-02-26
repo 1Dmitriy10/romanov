@@ -1,0 +1,83 @@
+//кнопки слайдера сми
+.slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    @include respond-to("tab") {
+        width: 28px;
+        height: 28px;
+    }
+}
+.msm-slider-btn-prev {
+    background-color: $slider-btn;
+    &:active {
+        background-color: $primary20;
+        & > svg {
+            fill: $beige;
+            & > path {
+                fill: $beige;
+            }
+        }
+    }
+    @include respond-to("tab") {
+        & > svg {
+            width: 15px;
+            height: 18px;
+        }
+    }
+}
+.msm-slider-btn-next {
+    background-color: $slider-btn;
+    transform: rotate(180deg);
+    &:active {
+        background-color: $primary20;
+        & > svg {
+            fill: $beige;
+            & > path {
+                fill: $beige;
+            }
+        }
+    }
+    @include respond-to("tab") {
+        & > svg {
+            width: 15px;
+            height: 18px;
+        }
+    }
+}
+.slider__btn-box {
+    display: flex;
+    gap: 11px;
+}
+
+.msm-swiper-slide {
+    height: 229px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+.msm__slider-img-wrap {
+    // width: 285px;
+    height: 190px;
+    position: relative;
+    border-radius: 18px;
+}
+.msm__slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+}
+.msm__slider-img-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+}

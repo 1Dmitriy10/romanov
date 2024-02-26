@@ -145,6 +145,7 @@
         @include font($w500, $font-12, $beige, $height-17);
     }
 }
+
 .btn-circle-circle_green {
     right: -34px;
     width: 3.2rem;
@@ -160,6 +161,9 @@
 //кнопка 2 с кругом черная
 .btn-circle_green_black {
     color: $black;
+}
+.btn-circle-opacity {
+    background-color: transparent;
 }
 //js анимация
 ._btn-underline-js {
@@ -177,4 +181,8 @@
     background-repeat: no-repeat;
     background-size: 0% 1.5px;
     transition: background-size 0.3s;
+}
+
+// кнопки слайдера
+.slider__btn-box {
 }

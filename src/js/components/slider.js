@@ -3,54 +3,35 @@
 import Swiper from 'swiper/bundle';
 import "swiper/swiper-bundle.css";
 
-export const swiper = new Swiper('.swiper', {
+export const msmSlider = new Swiper('.msm-slider', {
     // Стрелки
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.msm-slider-btn-next',
+        prevEl: '.msm-slider-btn-prev',
     },
-    // Пагинация
-    pagination: {
-        el: '.swiper-pagination',
-        //можно кликать по булетам
-        clickable: true
-    },
-    // Скрол
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-    /*Бесконечная прокрутка*/
-    loop: true,
-    /*Эффект трансформации при перелисывании*/
-    effect: 'coverflow',
-    coverflowEffect: {
-        /*Поворачивает карточки*/
-        rotate: 0,
-        stretch: 0,
-        depth: 60,
-        modifier: 3,
-        slideShadows: false
-    },
+
+
     /*Отступ у карточек*/
-    spaceBetween: 15,
+    spaceBetween: 20,
     /*Показывать по n карточек*/
     slidesPerView: 1,
-    /*Поставить карточку в центр*/
-    centeredSlides: true,
+
     /*Брек-поинты*/
     breakpoints: {
-        780: {
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        576: {
             slidesPerView: 2,
+            spaceBetween: 20,
         }
     },
     // При достижении конца, перепрыгнуть в начало
     rewind: true,
-    // Автовоспроизведение
-    autoplay: {
-        delay: 1000,
-        //остановка при наведении
-        pauseOnMouseEnter: true
-    },
-    //скорость перелистывания
-    speed: 1000,
+
 });

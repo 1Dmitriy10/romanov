@@ -1,0 +1,22 @@
+.msm {
+}
+.msm__container {
+    display: flex;
+    flex-direction: column;
+}
+.msm__title {
+    margin-bottom: 0;
+}
+.msm__title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 54px;
+    @include respond-to("tab") {
+        margin-bottom: 20px;
+    }
+}
+.msm__title {
+}
+.msm__slider-box {
+}
