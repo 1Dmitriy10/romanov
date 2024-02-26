@@ -2570,20 +2570,20 @@ section:last-child {
 
 .about__advent-box {
   margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+  grid-template-columns: repeat(4, auto);
   margin-bottom: 83px;
 }
 @media (max-width: 768px) {
   .about__advent-box {
     margin-top: 35px;
     margin-bottom: 30px;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 
@@ -2599,6 +2599,30 @@ section:last-child {
   width: -moz-fit-content;
   width: fit-content;
 }
+@media (max-width: 768px) {
+  .about__advent-item {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .about__advent-item:nth-child(odd) {
+    border-bottom: 1px solid var(--primary-20);
+    border-right: 1px solid var(--primary-20);
+  }
+  .about__advent-item:nth-child(even) {
+    border-bottom: 1px solid var(--primary-20);
+  }
+  .about__advent-item:nth-child(1) {
+    border-top: 1px solid var(--primary-20);
+  }
+  .about__advent-item:nth-child(2) {
+    border-top: 1px solid var(--primary-20);
+  }
+}
 
 .about__advent-item-num {
   font-family: var(--font-family-title);
@@ -2609,6 +2633,14 @@ section:last-child {
   letter-spacing: -0.05em;
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .about__advent-item-num {
+    font-weight: var(--normal);
+    font-size: var(--font-40);
+    color: var(--primary-black);
+    line-height: var(--height-44);
+  }
+}
 
 .about__advent-item-text {
   font-weight: var(--normal);
@@ -2616,6 +2648,15 @@ section:last-child {
   color: var(--primary-black);
   line-height: var(--height-20);
   letter-spacing: -0.06em;
+}
+@media (max-width: 768px) {
+  .about__advent-item-text {
+    font-weight: var(--normal);
+    font-size: var(--font-14);
+    color: var(--primary-black);
+    line-height: var(--height-17);
+    text-align: center;
+  }
 }
 
 .about__video-box {
@@ -2803,6 +2844,13 @@ section:last-child {
     -ms-flex: 0 1 calc((100% - 20px) / 2);
     flex: 0 1 calc((100% - 20px) / 2);
     padding: 23px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 }
 @media (max-width: 420px) {
