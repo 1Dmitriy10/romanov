@@ -1,0 +1,37 @@
+.info {
+}
+.info__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 18px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 14px;
+        border-radius: 30px;
+        background: rgb(118, 118, 118);
+        left: 0;
+        top: 20px;
+    }
+    @include respond-to("tab") {
+        &::before {
+            top: 0;
+        }
+    }
+}
+.info__title {
+    font-family: $text;
+    @include font($w400, $font-14, $black, $height);
+    letter-spacing: -0.08em;
+    margin-bottom: 16px;
+    @include respond-to("tab") {
+        @include font($w500, $font-12, $black, $height);
+    }
+}
+
+.info__text {
+    @include font($w400, $font-10, $black, $height);
+    letter-spacing: -0.08em;
+}
