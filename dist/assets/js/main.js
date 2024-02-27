@@ -11384,6 +11384,23 @@ module.exports = "data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAA
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mask: () => (/* binding */ mask)
+/* harmony export */ });
+function mask() {
+    var selector = document.querySelector(".phone");
+    console.log(selector)
+
+    var im = new Inputmask("+7-999-999-99-99");
+    im.mask(selector);
+}
+mask()
+
+/***/ }),
+/* 55 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   spoiler: () => (/* binding */ spoiler)
 /* harmony export */ });
 // ======================================================Спойлер===================================
@@ -11449,7 +11466,7 @@ spoiler()
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -11633,8 +11650,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fixedHeader_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _components_twoColumns_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _components_spoiler_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(54);
-/* harmony import */ var _components_headerSpoiler_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(55);
+/* harmony import */ var _components_mask_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(54);
+/* harmony import */ var _components_spoiler_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(55);
+/* harmony import */ var _components_headerSpoiler_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(56);
 
 
 
@@ -11644,7 +11662,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //Модальные окна  import { fancybox } from "./components/fancybox.js";
-//Маска для инпутов import { mask } from "./components/mask.js";
+
 
 
 //Анимация при скроле import { getAOS } from "./components/aos.js";
