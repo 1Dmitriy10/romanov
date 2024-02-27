@@ -6,6 +6,10 @@
     padding-bottom: 207px;
     display: flex;
     flex-direction: column;
+    @include respond-to("tab") {
+        padding-top: 120px;
+        padding-bottom: 128px;
+    }
 }
 .title-box-statistic {
     display: flex;
@@ -25,28 +29,65 @@
     border-radius: 18px;
     max-width: 371px;
     padding-left: 10px;
+    @include respond-to("tab") {
+        grid-template-columns: repeat(2, 1fr);
+        border: none;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
 }
 .statistic-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include respond-to("tab") {
+        justify-self: center;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        &:nth-child(odd) {
+            border-bottom: 1px solid $beige;
+            border-right: 1px solid $beige;
+        }
+        &:nth-child(even) {
+            border-bottom: 1px solid $beige;
+        }
+        &:nth-child(1) {
+            border-top: 1px solid $beige;
+        }
+        &:nth-child(2) {
+            border-top: 1px solid $beige;
+        }
+    }
 }
 .static-item-num {
     font-family: $title;
     @include font($w400, $font-90, $beige, $height-109);
+    @include respond-to("tab") {
+        @include font($w400, $font-52, $beige, $height-63);
+    }
 }
 .static-item-text {
     @include font($w400, $font-16, $beige, $height-20);
     letter-spacing: -0.06em;
     text-align: center;
     margin-bottom: 22px;
+    @include respond-to("tab") {
+        @include font($w400, $font-14, $beige, $height-17);
+    }
 }
 .results__subtitle {
     @include font($w400, $font-22, $beige, $height-27);
     letter-spacing: -0.06em;
     text-transform: uppercase;
     margin-bottom: 40px;
+    @include respond-to("tab") {
+        margin-bottom: 60px;
+        @include font($w400, $font-14, $beige, $height-17);
+    }
 }
 .results__slider-box {
     margin-bottom: 45px;
