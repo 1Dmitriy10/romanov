@@ -3399,3 +3399,109 @@ section:last-child {
     align-self: flex-end;
   }
 }
+
+.partners__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.partners__card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .partners__card-box {
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    row-gap: 25px;
+  }
+}
+
+.partners__card {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 calc((100% - 90px) / 4);
+  flex: 0 1 calc((100% - 90px) / 4);
+}
+@media (max-width: 992px) {
+  .partners__card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 calc((100% - 60px) / 3);
+    flex: 0 1 calc((100% - 60px) / 3);
+  }
+}
+@media (max-width: 768px) {
+  .partners__card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 calc((100% - 10px) / 2);
+    flex: 0 1 calc((100% - 10px) / 2);
+  }
+}
+@media (max-width: 576px) {
+  .partners__card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+}
+
+.partners__img-wrap {
+  position: relative;
+  border: 1px solid var(--primary-20);
+  border-radius: 18px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.partners__card-title {
+  font-family: var(--font-family-text);
+  font-weight: var(--Medium);
+  font-size: var(--font-20);
+  color: var(--primary-black);
+  line-height: var(--height-24);
+  letter-spacing: -0.06em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .partners__card-title {
+    font-weight: var(--Medium);
+    font-size: var(--font-20);
+    color: var(--primary-black);
+    line-height: var(--height-22);
+  }
+}
+
+.partners__card-text {
+  font-weight: var(--Medium);
+  font-size: var(--font-14);
+  color: var(--primary-black);
+  line-height: var(--height-20);
+  letter-spacing: -0.06em;
+}
+@media (max-width: 768px) {
+  .partners__card-text {
+    font-weight: var(--normal);
+    font-size: var(--font-12);
+    color: var(--primary-black);
+    line-height: var(--height-17);
+  }
+}
