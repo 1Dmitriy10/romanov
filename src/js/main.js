@@ -6,7 +6,7 @@ import { menuItemArrow } from "./components/menuItemArrow.js";
 import { fixedHeader } from "./components/fixedHeader.js";
 import { twoColumns } from "./components/twoColumns.js";
 import { msmSlider, resultSlider, expertSlider } from "./components/slider.js";
-//Модальные окна  import { fancybox } from "./components/fancybox.js";
+import { fancybox } from "./components/fancybox.js";
 import { mask } from "./components/mask.js";
 import { spoiler } from "./components/spoiler.js";
 import { headerSpoiler } from "./components/headerSpoiler.js";

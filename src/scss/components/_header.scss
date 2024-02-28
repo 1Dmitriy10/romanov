@@ -1,5 +1,5 @@
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -161,12 +161,12 @@
 //------первый уровень--------
 .nav {
     display: flex;
-    margin-right: r(106);
+    margin-right: r(80);
     @media (max-width: 1270px) {
-        margin-right: r(40);
+        margin-right: r(20);
     }
     @include respond-to("pc-old") {
-        margin-right: r(20);
+        margin-right: r(10);
     }
     @include respond-to("nout") {
         margin-right: r(0);
@@ -191,6 +191,11 @@
             opacity: 1;
             z-index: 1;
         }
+    }
+}
+.nav-btn {
+    @include respond-to("pc-old") {
+        min-width: 160px;
     }
 }
 .nav-link {
@@ -225,6 +230,7 @@
     flex-direction: column;
     width: max-content;
     max-width: 220px;
+    box-shadow: 0rem 0.25rem 0.38rem 0rem rgba(0, 0, 0, 0.25);
 }
 .first__nav-2lv {
     left: -20px;
@@ -278,6 +284,7 @@
     width: max-content;
     max-width: 220px;
     height: 100%;
+    box-shadow: 0rem 0.25rem 0.38rem 0rem rgba(0, 0, 0, 0.25);
 }
 .nav-item-lv-3 {
     display: flex;

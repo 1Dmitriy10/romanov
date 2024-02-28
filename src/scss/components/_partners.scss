@@ -56,3 +56,6 @@
         @include font($w400, $font-12, $black, $height-17);
     }
 }
+.partners__img-wrap.fancybox__content {
+    border-radius: 10px;
+}

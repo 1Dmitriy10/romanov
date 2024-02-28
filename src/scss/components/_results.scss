@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
     margin-bottom: 16px;
 }
 .results__title {
@@ -29,6 +28,8 @@
     border-radius: 18px;
     max-width: 371px;
     padding-left: 10px;
+    align-self: flex-start;
+    margin-top: 20px;
     @include respond-to("tab") {
         grid-template-columns: repeat(2, 1fr);
         border: none;
@@ -36,6 +37,7 @@
         width: 100%;
         margin-bottom: 20px;
         padding-left: 0;
+        margin-top: 0;
     }
 }
 .statistic-item {
@@ -120,4 +122,7 @@
 .result__slide-text {
     @include font($w400, $font-18, $beige, $height-22);
     letter-spacing: -0.06em;
+}
+#result--clone {
+    position: relative;
 }
