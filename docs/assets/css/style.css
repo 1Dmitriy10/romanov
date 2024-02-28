@@ -2017,7 +2017,7 @@ section:last-child {
   transition: 0.5s;
 }
 .nav_box-mob {
-  height: 100dvh;
+  min-height: 100dvh;
   padding: 91px 30px 60px 30px;
   position: fixed;
   display: -webkit-box;

@@ -57,7 +57,7 @@
 }
 // Мобильное меню
 .nav_box-mob {
-    height: 100dvh;
+    min-height: 100dvh;
     padding: 91px 30px 60px 30px;
     position: fixed;
     display: flex;
