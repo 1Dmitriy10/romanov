@@ -1,5 +1,6 @@
 .results {
     background-color: $brown;
+    overflow: hidden;
 }
 .results__container {
     padding-top: 185px;
@@ -98,7 +99,7 @@
 .result-slider {
     width: auto !important;
     @media (min-width: 1430px) {
-        width: calc(48.6% + 50vw) !important;
+        width: calc(50% + 50vw) !important;
     }
 }
 .result__slide {

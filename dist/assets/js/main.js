@@ -246,7 +246,8 @@ __webpack_require__.r(__webpack_exports__);
 //подключение в gulp 
 
 
-
+let windowInnerWidth = window.innerWidth;
+console.log(windowInnerWidth)
 //========================
 const msmSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.msm-slider', {
     // Стрелки
@@ -254,7 +255,6 @@ const msmSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.ms
         nextEl: '.msm-btn-next',
         prevEl: '.msm-btn-prev',
     },
-
 
     /*Отступ у карточек*/
     spaceBetween: 20,

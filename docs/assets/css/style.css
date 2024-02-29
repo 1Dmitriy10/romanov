@@ -3077,6 +3077,7 @@ section:last-child {
 
 .results {
   background-color: var(--primary-brown);
+  overflow: hidden;
 }
 
 .results__container {
@@ -3244,7 +3245,7 @@ section:last-child {
 }
 @media (min-width: 1430px) {
   .result-slider {
-    width: calc(48.6% + 50vw) !important;
+    width: calc(50% + 50vw) !important;
   }
 }
 

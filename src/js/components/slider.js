@@ -2,7 +2,8 @@
 //подключение в gulp 
 import Swiper from 'swiper/bundle';
 import "swiper/swiper-bundle.css";
-
+let windowInnerWidth = window.innerWidth;
+console.log(windowInnerWidth)
 //========================
 export const msmSlider = new Swiper('.msm-slider', {
     // Стрелки
@@ -10,7 +11,6 @@ export const msmSlider = new Swiper('.msm-slider', {
         nextEl: '.msm-btn-next',
         prevEl: '.msm-btn-prev',
     },
-
 
     /*Отступ у карточек*/
     spaceBetween: 20,
