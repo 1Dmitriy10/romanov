@@ -55,8 +55,8 @@
 
     margin-bottom: 62px;
     @include respond-to("tab") {
-        margin-top: 35px;
-        margin-bottom: 30px;
+        margin-bottom: 33px;
+        margin-top: 3px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
@@ -92,6 +92,7 @@
     margin-bottom: 10px;
     @include respond-to("tab") {
         @include font($w400, $font-40, $black, $height-44);
+        margin-bottom: 34px;
     }
 }
 .about__advent-item-text {
@@ -100,6 +101,7 @@
     @include respond-to("tab") {
         @include font($w400, $font-14, $black, $height-17);
         text-align: center;
+        margin-bottom: 14px;
     }
 }
 .about__video-box {
@@ -164,7 +166,7 @@
         left: 100%;
     }
     @include respond-to("tel-old") {
-        left: 80%;
+        // left: 80%;
     }
 }
 .about__video-circle {

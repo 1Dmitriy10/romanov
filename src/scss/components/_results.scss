@@ -9,7 +9,7 @@
     flex-direction: column;
     @include respond-to("tab") {
         padding-top: 120px;
-        padding-bottom: 128px;
+        padding-bottom: 56px;
     }
 }
 .title-box-statistic {
@@ -22,6 +22,9 @@
     color: $beige;
     flex: 0 1 68%;
     margin-bottom: 0;
+    @include respond-to("tab") {
+        margin-bottom: 15px;
+    }
 }
 .statistic-box {
     display: grid;
@@ -107,11 +110,17 @@
     flex-direction: column !important;
     justify-content: space-between !important;
     height: 412px !important;
+    @include respond-to("tab") {
+        height: 348px !important;
+    }
 }
 .result__slider-img-wrap {
     height: 380px;
     position: relative;
     border-radius: 30px;
+    @include respond-to("tab") {
+        margin-bottom: 17px;
+    }
 }
 .result__slider-img {
     position: absolute;
@@ -122,8 +131,10 @@
     border-radius: 30px;
 }
 .result__slide-text {
-    @include font($w400, $font-18, $beige, $height-22);
+    @include font($w400, $font-14, $beige, $height-17);
     letter-spacing: -0.06em;
+    @include respond-to("tab") {
+    }
 }
 #result--clone {
     position: relative;

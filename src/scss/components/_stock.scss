@@ -9,6 +9,9 @@
     @include respond-to("nout") {
         padding: 110px 0 110px 0;
     }
+    @include respond-to("tab") {
+        padding: 110px 0 100px 0;
+    }
 }
 .stock__title {
     color: $beige;
@@ -17,6 +20,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    @include respond-to("tab") {
+        flex: 0 1 100%;
+        gap: 15px;
+    }
 }
 .stock__card {
     flex: 0 1 calc((100% - 2 * 30px) / 3);
@@ -30,6 +37,7 @@
     }
     @include respond-to("tab") {
         flex: 0 1 100%;
+        min-height: 287px;
     }
 }
 .stock__card-bg {

@@ -18,6 +18,9 @@
         row-gap: 25px;
         margin-bottom: 33px;
     }
+    @include respond-to("tab") {
+        gap: 20px;
+    }
 }
 .footer__up-col {
     display: grid;
@@ -61,6 +64,9 @@
     }
     @include respond-to("pc-old") {
         max-width: 100%;
+    }
+    @include respond-to("tab") {
+        gap: 5px;
     }
 }
 .footer-img-box {
@@ -114,6 +120,9 @@
         grid-template-rows: repeat(2, 1fr);
         row-gap: 16px;
     }
+    @include respond-to("tab") {
+        gap: 0;
+    }
 }
 .footer__down-col {
     display: flex;
@@ -122,6 +131,9 @@
     max-width: 300px;
     @include respond-to("pc-old") {
         max-width: 240px;
+    }
+    @include respond-to("tab") {
+        height: 60px;
     }
 }
 .footer__down-col_gap {
@@ -170,4 +182,7 @@
 }
 .footer__up-col_last {
     gap: 22px;
+    @include respond-to("tab") {
+        gap: 0;
+    }
 }

@@ -33,6 +33,7 @@
     @include respond-to("tab") {
         padding-bottom: 23px;
         flex: 0 1 calc((100% - 1 * 16px) / 2);
+        min-height: 272px;
     }
     @include respond-to("tel") {
         flex: 0 1 100%;
@@ -41,6 +42,9 @@
 .articles__card-img-wrap {
     position: relative;
     height: 184.74px;
+    @include respond-to("tab") {
+        height: 140.74px;
+    }
 }
 .articles__card-img {
     position: absolute;

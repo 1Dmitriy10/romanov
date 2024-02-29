@@ -38,7 +38,7 @@
     max-width: 696px;
     @include respond-to("tab") {
         @include font($w400, $font-30, $beige, $height);
-        margin-bottom: 15px;
+        margin-bottom: 26px;
     }
 }
 .help__subtitle {
@@ -48,7 +48,7 @@
     margin-bottom: 46px;
     @include respond-to("tab") {
         @include font($w400, $font-14, $beige, $height-17);
-        margin-bottom: 25px;
+        margin-bottom: 45px;
     }
 }
 .form {
@@ -63,6 +63,7 @@
     flex-wrap: wrap;
     @include respond-to("tab") {
         flex-direction: column;
+        margin-bottom: 12px;
     }
 }
 .form__row_text {
@@ -71,12 +72,17 @@
     margin-bottom: 31px;
     @include respond-to("tab") {
         margin-bottom: 20px;
+        gap: 5px;
+        margin-bottom: 12px;
     }
 }
 .form__input {
     border-radius: 10px;
     background: $beige;
     padding: 24.5px 15px;
+    @include respond-to("tab") {
+        padding: 16.5px 15px;
+    }
 }
 .form__input_two-col {
     flex: 0 1 calc((100% - 1 * 20px) / 2);
@@ -100,14 +106,23 @@ input::placeholder {
     border-radius: 10px;
     background: $beige;
     padding: 24.5px 15px;
+    @include respond-to("tab") {
+        padding: 16.5px 15px;
+    }
 }
 .form__btn-box {
 }
 .help__form__btn-box {
     margin-bottom: 25px;
+    @include respond-to("tab") {
+        margin-bottom: 12px;
+    }
 }
 .help__btn {
     width: 100%;
+    @include respond-to("tab") {
+        padding: 16.5px 15px;
+    }
 }
 .form__agree {
     @include font($w400, $font-12, $beige, $height);
