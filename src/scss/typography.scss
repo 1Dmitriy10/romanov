@@ -60,7 +60,7 @@ h3 {
 
 p {
     font-family: $text;
-    @include font($w400, $font-20, $black, $height-20);
+    @include font($w400, $font-18, $black, $height-20);
     letter-spacing: -0.06px;
     &:not(:last-of-type) {
         margin-bottom: 10px;

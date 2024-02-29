@@ -4,7 +4,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 65px 70px;
+    padding: 65px 70px 65px 70px;
     @include respond-to("tab") {
         padding: 50px 23px;
     }
@@ -34,7 +34,7 @@
 .help__title {
     @include font($w400, $font-52, $beige, $height);
     letter-spacing: -0.08em;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     max-width: 696px;
     @include respond-to("tab") {
         @include font($w400, $font-30, $beige, $height);
@@ -45,7 +45,7 @@
     @include font($w400, $font-20, $beige, $height-22);
     letter-spacing: -0.06em;
     max-width: 445px;
-    margin-bottom: 40px;
+    margin-bottom: 46px;
     @include respond-to("tab") {
         @include font($w400, $font-14, $beige, $height-17);
         margin-bottom: 25px;
@@ -54,12 +54,12 @@
 .form {
     display: flex;
     flex-direction: column;
-    max-width: 449px;
+    max-width: 455px;
 }
 .form__row {
     display: flex;
     gap: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
     flex-wrap: wrap;
     @include respond-to("tab") {
         flex-direction: column;
@@ -68,7 +68,7 @@
 .form__row_text {
     flex-direction: column;
     gap: 13px;
-    margin-bottom: 25px;
+    margin-bottom: 31px;
     @include respond-to("tab") {
         margin-bottom: 20px;
     }
@@ -76,7 +76,7 @@
 .form__input {
     border-radius: 10px;
     background: $beige;
-    padding: 23px 15px;
+    padding: 24.5px 15px;
 }
 .form__input_two-col {
     flex: 0 1 calc((100% - 1 * 20px) / 2);
@@ -99,7 +99,7 @@ input::placeholder {
 .form__text-area {
     border-radius: 10px;
     background: $beige;
-    padding: 23px 15px;
+    padding: 24.5px 15px;
 }
 .form__btn-box {
 }

@@ -18,8 +18,8 @@
     object-fit: cover;
 }
 .banner__container {
-    padding-top: 20%;
-    padding-bottom: 10.5%;
+    padding-top: 17%;
+    padding-bottom: 9.8%;
     position: relative;
     z-index: 10;
     @include respond-to("pc-old") {
@@ -33,7 +33,7 @@
 }
 .banner__subtitle {
     @include font($w400, $font-22, $beige, $height-27);
-    max-width: 830px;
+    max-width: 790px;
     margin-bottom: 31px;
     @include respond-to("tab") {
         @include font($w400, $font-14, $beige, $height-17);

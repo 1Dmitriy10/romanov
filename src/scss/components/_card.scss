@@ -7,6 +7,7 @@
     padding: 36px 75px;
     display: flex;
     gap: 24px;
+    min-height: 197px;
     @include respond-to("pc-old") {
         padding: 23px;
     }
@@ -35,6 +36,7 @@
 .card-text-box {
     display: flex;
     flex-direction: column;
+    max-width: 378px;
 }
 .card-title {
     font-family: $text;
@@ -48,7 +50,7 @@
     }
 }
 .card-text {
-    @include font($w400, $font-18, $black, $height-17);
+    @include font($w400, $font-18, $black, $height-20);
     letter-spacing: -0.06em;
     @include respond-to("tab") {
         @include font($w400, $font-14, $black, $height-17);
@@ -168,10 +170,10 @@
     border: 1px solid $primary20;
     border-radius: 10px;
     background: rgba(117, 110, 74, 0.85);
-    padding: 14px;
+    padding: 14px 14px 14px 14px;
     display: flex;
     gap: 13px;
-    min-height: 80px;
+    min-height: 73px;
     @include respond-to("tab") {
         flex: 0 1 calc((100% - 1 * 10px) / (2));
         padding: 12px;

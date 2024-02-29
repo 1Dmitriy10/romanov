@@ -38,25 +38,22 @@
     font-family: $title;
     @include font($w400, $font-36, $black, $height-34);
     text-transform: uppercase;
-    letter-spacing: -0.06em;
-    margin-bottom: 20px;
+    letter-spacing: -0.05em;
+    margin-bottom: 32px;
     @include respond-to("tab") {
         @include font($w500, $font-20, $black, $height-24);
         margin-bottom: 15px;
     }
 }
 .about__text {
+    // max-width: 670px;
 }
 .about__advent-box {
-    margin-top: 40px;
-    // display: flex;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
-
+    margin-top: 18px;
     display: grid;
     grid-template-columns: repeat(4, auto);
 
-    margin-bottom: 83px;
+    margin-bottom: 62px;
     @include respond-to("tab") {
         margin-top: 35px;
         margin-bottom: 30px;
@@ -154,7 +151,7 @@
     width: 268px;
     height: 179.03px;
     bottom: -123px;
-    left: 50%;
+    left: 58%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;

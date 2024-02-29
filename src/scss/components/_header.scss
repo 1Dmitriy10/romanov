@@ -12,7 +12,7 @@
 }
 .header__row {
     display: flex;
-    padding: 15px 0 11px 0;
+    padding: 15px 0 8px 0;
     align-items: center;
     justify-content: space-between;
     @include respond-to("tab") {
@@ -32,13 +32,13 @@
     border-radius: 7px;
     box-shadow: 0rem 0.25rem 0.38rem 0rem rgba(0, 0, 0, 0.25);
     background: $beige;
-    padding: 15px;
+    padding: 10px 15px 10px 15px;
     @include respond-to("tab") {
         display: none;
     }
 }
 .header__logo-link {
-    margin-right: 2%;
+    margin-right: 3%;
     @media (max-width: 1230px) {
         margin-right: 1.5%;
     }
@@ -81,8 +81,8 @@
 }
 .address-route {
     @include font($w400, $font-16, $beige, $height-20);
-    letter-spacing: -0.1em;
-    text-decoration: underline;
+    // letter-spacing: -0.1em;
+    border-bottom: 1px solid rgb(239, 234, 229);
 }
 .contacts-box {
     display: flex;
@@ -91,7 +91,7 @@
 .header__contacts-box {
     margin-right: r(30);
     @media (max-width: 1230px) {
-        margin-right: r(20);
+        margin-right: 2.9rem;
     }
     @include respond-to("pc-old") {
         margin-right: r(10);
@@ -161,7 +161,7 @@
 //------первый уровень--------
 .nav {
     display: flex;
-    margin-right: r(80);
+    margin-right: 4.6rem;
     @media (max-width: 1270px) {
         margin-right: r(20);
     }
@@ -175,7 +175,7 @@
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 17px;
+    gap: 23px;
     @include respond-to("pc-old") {
         gap: 10px;
     }
@@ -194,6 +194,7 @@
     }
 }
 .nav-btn {
+    padding: 10px 10px;
     @include respond-to("pc-old") {
         min-width: 160px;
     }
