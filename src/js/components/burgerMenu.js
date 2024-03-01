@@ -18,7 +18,7 @@ export function getMobMenu() {
             burgerMenu.classList.remove('active')
             //если меню закрыто
         } else {
-            body.style.cssText = `overflow: hidden`;
+            // body.style.cssText = `overflow: hidden`;
             menu.classList.add('active')
             burgerMenu.classList.add('active')
         };
