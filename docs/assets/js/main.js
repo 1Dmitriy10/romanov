@@ -42,6 +42,7 @@ function getMobMenu() {
     let menu = document.querySelector('.nav_box-mob');
     let navLinks = document.querySelectorAll('.nav__link');
     let body = document.querySelector('body');
+    let height = window.innerHeight
 
     burgerMenuBTN.addEventListener('click', openMenu);
     exitBurgerMenuBTN.addEventListener('click', closeMenu);
@@ -54,8 +55,10 @@ function getMobMenu() {
             burgerMenu.classList.remove('active')
             //если меню закрыто
         } else {
-            // body.style.cssText = `overflow: hidden`;
+            body.style.cssText = `overflow: hidden`;
             menu.classList.add('active')
+            menu.style.cssText = `height: ${height}px`;
+            console.log(menu)
             burgerMenu.classList.add('active')
         };
         //отключение мобильного меню при клике по элементу меню
