@@ -58,7 +58,7 @@
 // Мобильное меню
 .nav_box-mob {
     // min-height: 100%;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     padding: 91px 30px 60px 30px;
     position: fixed;
     display: flex;
@@ -79,5 +79,5 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 }
