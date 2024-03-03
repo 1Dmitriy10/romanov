@@ -1558,6 +1558,8 @@ section:last-child {
 }
 
 .mob-nav-list {
+  position: fixed;
+  overflow-y: scroll;
   margin-bottom: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2166,7 +2168,8 @@ a.footer__down-tex {
   transition: 0.5s;
 }
 .nav_box-mob {
-  min-height: 100dvh;
+  min-height: 100%;
+  overflow-y: scroll;
   padding: 91px 30px 60px 30px;
   position: fixed;
   display: -webkit-box;
@@ -2203,7 +2206,6 @@ a.footer__down-tex {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  overflow-y: scroll;
 }
 
 .icons-box {
