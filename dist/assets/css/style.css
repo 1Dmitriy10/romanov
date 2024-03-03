@@ -1558,6 +1558,8 @@ section:last-child {
 }
 
 .mob-nav-list {
+  min-height: 80%;
+  top: 180px;
   position: fixed;
   overflow-y: scroll;
   margin-bottom: auto;
@@ -1572,6 +1574,7 @@ section:last-child {
 }
 
 .mob-menu-btn-wrap {
+  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1727,6 +1730,17 @@ section:last-child {
 
 .mob-nav-list-lv-3 {
   padding: 11px 0;
+}
+
+.header_mob-wrap-rewi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: auto;
 }
 
 .footer {
