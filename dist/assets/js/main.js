@@ -57,7 +57,7 @@ function getMobMenu() {
         } else {
             body.style.cssText = `overflow: hidden`;
             menu.classList.add('active')
-            menu.style.cssText = `height: ${height}px`;
+            // menu.style.cssText = `height: ${height}px`;
             console.log(menu)
             burgerMenu.classList.add('active')
         };
