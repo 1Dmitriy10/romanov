@@ -1559,6 +1559,7 @@ section:last-child {
 
 .mob-nav-list {
   min-height: 80%;
+  width: 84%;
   top: 180px;
   position: fixed;
   overflow-y: scroll;
@@ -1733,6 +1734,7 @@ section:last-child {
 }
 
 .header_mob-wrap-rewi {
+  padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1741,6 +1743,10 @@ section:last-child {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-top: auto;
+}
+
+.header__btn-mob {
+  width: 100%;
 }
 
 .footer {

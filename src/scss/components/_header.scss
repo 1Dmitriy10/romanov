@@ -339,6 +339,7 @@
 }
 .mob-nav-list {
     min-height: 80%;
+    width: 84%;
     top: 180px;
     position: fixed;
     overflow-y: scroll;
@@ -452,7 +453,11 @@
     padding: 11px 0;
 }
 .header_mob-wrap-rewi {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     margin-top: auto;
+}
+.header__btn-mob {
+    width: 100%;
 }
