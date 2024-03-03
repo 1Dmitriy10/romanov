@@ -22,6 +22,7 @@
     flex: 0 1 57.5%;
 }
 .about__title {
+    letter-spacing: -0.04em;
     @include respond-to("tab") {
         display: none;
     }
@@ -31,17 +32,19 @@
     @include respond-to("tab") {
         display: block;
         text-align: center;
-        font-size: $font-35;
+        font-size: var(--fs-35);
     }
 }
 .about__subtitle {
-    font-family: $title;
-    @include font($w400, $font-36, $black, $height-34);
+    font-family: var(--ff-title);
+    @include font(var(--fw-400), var(--fs-36), var(--primary-black), var(--lh-125));
     text-transform: uppercase;
-    letter-spacing: -0.05em;
-    margin-bottom: 32px;
+    letter-spacing: -0.04em;
+    margin-bottom: 25px;
     @include respond-to("tab") {
-        @include font($w500, $font-20, $black, $height-24);
+        font-weight: var(--fw-500);
+        font-size: var(--fs-20);
+        line-height: var(--lh-130);
         margin-bottom: 15px;
     }
 }
@@ -49,7 +52,7 @@
     // max-width: 670px;
 }
 .about__advent-box {
-    margin-top: 18px;
+    // margin-top: 18px;
     display: grid;
     grid-template-columns: repeat(4, auto);
 
@@ -71,35 +74,35 @@
         width: 100%;
         align-items: center;
         &:nth-child(odd) {
-            border-bottom: 1px solid $primary20;
-            border-right: 1px solid $primary20;
+            border-bottom: 1px solid var(--green);
+            border-right: 1px solid var(--green);
         }
         &:nth-child(even) {
-            border-bottom: 1px solid $primary20;
+            border-bottom: 1px solid var(--green);
         }
         &:nth-child(1) {
-            border-top: 1px solid $primary20;
+            border-top: 1px solid var(--green);
         }
         &:nth-child(2) {
-            border-top: 1px solid $primary20;
+            border-top: 1px solid var(--green);
         }
     }
 }
 .about__advent-item-num {
-    font-family: $title;
-    @include font($w400, $font-80, $black, $height-97);
+    font-family: var(--ff-title);
+    @include font(var(--fw-400), var(--fs-80), var(--primary-black), var(--lh-100));
     letter-spacing: -0.05em;
     margin-bottom: 10px;
     @include respond-to("tab") {
-        @include font($w400, $font-40, $black, $height-44);
+        font-size: var(--fs-40);
         margin-bottom: 34px;
     }
 }
 .about__advent-item-text {
-    @include font($w400, $font-16, $black, $height-20);
+    @include font(var(--fw-400), var(--fs-16), var(--primary-black), var(--lh-120));
     letter-spacing: -0.06em;
     @include respond-to("tab") {
-        @include font($w400, $font-14, $black, $height-17);
+        font-size: var(--fs-14);
         text-align: center;
         margin-bottom: 14px;
     }
@@ -174,21 +177,21 @@
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    background: $grey;
+    background: var(--grey);
     width: 64px;
     height: 64px;
     padding-left: 5px;
     transition: 0.3s;
     &:hover {
         transition: 0.3s;
-        background: $beige;
+        background: var(--primary-beige);
         & svg {
             transition: 0.3s;
-            fill: $primary20;
+            fill: var(--green);
         }
         & svg > path {
             transition: 0.3s;
-            fill: $primary20;
+            fill: var(--green);
         }
     }
 }
@@ -224,7 +227,7 @@
     min-width: 38px;
     min-height: 38px;
     border-radius: 100%;
-    background-color: $beige;
+    background-color: var(--primary-beige);
     display: flex;
     align-items: center;
     justify-content: center;

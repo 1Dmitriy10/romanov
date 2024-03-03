@@ -22,6 +22,10 @@
 }
 //secondary
 .social-icon_big {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    @include respond-to("tab") {
+        width: 25px;
+        height: 25px;
+    }
 }

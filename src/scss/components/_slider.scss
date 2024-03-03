@@ -12,13 +12,13 @@
     }
 }
 .slider-btn-prev {
-    background-color: $slider-btn;
-    &:active {
-        background-color: $primary20;
+    background-color: var(--lite-green);
+    &:hover {
+        background-color: var(--green);
         & > svg {
-            fill: $beige;
+            fill: var(--primary-beige);
             & > path {
-                fill: $beige;
+                fill: var(--primary-beige);
             }
         }
     }
@@ -30,14 +30,14 @@
     }
 }
 .slider-btn-next {
-    background-color: $slider-btn;
+    background-color: var(--lite-green);
     transform: rotate(180deg);
-    &:active {
-        background-color: $primary20;
+    &:hover {
+        background-color: var(--green);
         & > svg {
-            fill: $beige;
+            fill: var(--primary-beige);
             & > path {
-                fill: $beige;
+                fill: var(--primary-beige);
             }
         }
     }
@@ -83,13 +83,13 @@
 }
 .slider-btn_white {
     background-color: transparent;
-    border: 1px solid $beige;
-    &:active {
-        background-color: $beige;
+    border: 1px solid var(--primary-beige);
+    &:hover {
+        background-color: var(--primary-beige);
         & > svg {
-            fill: $beige;
+            fill: var(--primary-beige);
             & > path {
-                fill: $brown;
+                fill: var(--btn-banner);
             }
         }
     }

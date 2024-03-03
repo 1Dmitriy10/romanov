@@ -1,11 +1,11 @@
 .footer {
     padding: 0 10px;
-    background-color: $black;
+    background-color: var(--primary-black);
 }
 .footer__container {
     display: flex;
     flex-direction: column;
-    padding: 67px 0 62px 0;
+    padding: 61px 0 62px 0;
 }
 .footer__up-row {
     display: grid;
@@ -19,25 +19,30 @@
         margin-bottom: 33px;
     }
     @include respond-to("tab") {
-        gap: 20px;
+        gap: 30px;
+        margin-bottom: 0;
     }
 }
 .footer__up-col {
     display: grid;
 }
 .footer__up-col-title {
-    @include font($w500, $font-22, $beige, $height-24);
+    font-family: var(--ff-title);
+    @include font(var(--fw-400), var(--fs-26), var(--primary-beige), var(--lh-130));
     letter-spacing: -0.06em;
     text-transform: uppercase;
-    margin-bottom: 1.2625rem;
+    margin-bottom: 10px;
     @include respond-to("pc-old") {
         margin-bottom: r(15);
+    }
+    @include respond-to("tab") {
+        margin-bottom: 7px;
     }
 }
 .footer__up-col-link {
     width: fit-content;
-    font-family: $text;
-    @include font($w500, $font-16, $beige, $height-20);
+    font-family: var(--ff-text);
+    @include font(var(--fw-400), var(--fs-16), var(--primary-beige), var(--lh-130));
     letter-spacing: -0.06em;
     text-transform: uppercase;
     //
@@ -51,7 +56,8 @@
         background-size: 100% 1.5px;
     }
     @include respond-to("tab") {
-        @include font($w400, $font-12, $beige, $height-17);
+        font-weight: var(--fw-300);
+        font-size: var(--fs-12);
     }
 }
 .footer__up-col {
@@ -66,12 +72,15 @@
         max-width: 100%;
     }
     @include respond-to("tab") {
-        gap: 5px;
+        gap: 7px;
     }
 }
 .footer-img-box {
     display: flex;
     gap: 7px;
+    margin-top: 5px;
+    margin-bottom: 23px;
+
     @include respond-to("tab") {
         display: none;
     }
@@ -83,32 +92,48 @@
 }
 .footer__address-box {
     gap: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
+    @include respond-to("tab") {
+        margin-bottom: 18px;
+    }
 }
 .footer-addres {
-    @include font($w400, $font-16, $beige, $height-17);
+    @include font(var(--fw-400), var(--fs-16), var(--primary-beige), var(--lh-120));
     letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        font-size: var(--fs-14);
+        font-weight: var(--fw-500);
+    }
 }
 .footer-address-route {
-    @include font($w500, $font-14, $beige, $height-20);
+    @include font(var(--fw-300), var(--fs-14), var(--primary-beige), var(--lh-120));
     letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        font-size: var(--fs-12);
+        font-weight: var(--fw-400);
+    }
 }
 .footer__contacts-box {
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 29px;
+    @include respond-to("tab") {
+        margin-bottom: 18px;
+    }
 }
 .footer-tel {
-    @include font($w500, $font-24, $beige, $height-29);
+    @include font(var(--fw-400), var(--fs-24), var(--primary-beige), var(--lh-120));
     letter-spacing: -0.06em;
     @include respond-to("tab") {
-        @include font($w400, $font-12, $beige, $height-17);
+        font-weight: var(--fw-500);
+        font-size: var(--fs-14);
     }
 }
 .footer-schedule {
-    @include font($w400, $font-12, $beige, $height-17);
+    @include font(var(--fw-300), var(--fs-14), var(--primary-beige), var(--lh-120));
     letter-spacing: -0.06em;
     @include respond-to("tab") {
-        @include font($w400, $font-12, $beige, $height-17);
+        font-size: var(--fs-12);
+        font-weight: var(--fw-400);
     }
 }
 .footer__down-row {
@@ -122,6 +147,8 @@
     }
     @include respond-to("tab") {
         gap: 0;
+        // column-gap: 33px;
+        grid-template-columns: repeat(2, auto);
     }
 }
 .footer__down-col {
@@ -133,7 +160,8 @@
         max-width: 240px;
     }
     @include respond-to("tab") {
-        height: 60px;
+        height: fit-content;
+        width: 141px;
     }
 }
 .footer__down-col_gap {
@@ -147,11 +175,21 @@
     @include respond-to("pc-old") {
         align-items: flex-start;
     }
+    @include respond-to("tab") {
+        gap: 8px;
+    }
 }
 .footer__down-tex {
-    @include font($w500, $font-12, $beige, $height-17);
+    @include font(var(--fw-400), var(--fs-12), var(--primary-beige), var(--lh-145));
     letter-spacing: -0.06em;
     width: fit-content;
+    @include respond-to("tab") {
+        font-weight: var(--fw-400);
+        font-size: var(--fs-10);
+    }
+}
+a.footer__down-tex {
+    text-decoration: underline;
 }
 .footer__down-icon-link {
     width: 30px;
@@ -165,11 +203,20 @@
             transform: scale(1.2);
         }
     }
+    @include respond-to("tab") {
+        width: 25px;
+        height: 25px;
+    }
 }
 .footer__down-tex_lite {
-    @include font($w400, $font-10, $beige, $height-17);
+    @include font(var(--fw-300), var(--fs-10), var(--primary-beige), var(--lh-145));
     letter-spacing: -0.06em;
-    line-height: 145%;
+    @include respond-to("tab") {
+        font-weight: var(--fw-400);
+        font-size: var(--fs-8);
+        width: 300px;
+        margin-top: -35px;
+    }
 }
 .footer__up-col-title_opacity {
     opacity: 0;
@@ -181,7 +228,7 @@
     }
 }
 .footer__up-col_last {
-    gap: 22px;
+    gap: 0;
     @include respond-to("tab") {
         gap: 0;
     }

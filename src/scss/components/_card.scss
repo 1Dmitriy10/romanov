@@ -1,73 +1,17 @@
-//карточка со звездой на зеленом фоне
-.primary-card {
-    flex: 0 1 calc((100% - 30px) / 2);
-    border: 1px solid $card-green;
-    border-radius: 18px;
-    background: $card-green;
-    padding: 36px 75px;
-    display: flex;
-    gap: 24px;
-    min-height: 197px;
-    @include respond-to("pc-old") {
-        padding: 23px;
-    }
-    @include respond-to("tab") {
-        flex: 0 1 100%;
-        background: transparent;
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-.card__icon-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 38px;
-    min-height: 38px;
-    height: fit-content;
-    width: fit-content;
-    border-radius: 100%;
-    background-color: $primary20;
-    @include respond-to("tab") {
-        min-width: 23px;
-        min-height: 23px;
-    }
-}
-.card-text-box {
-    display: flex;
-    flex-direction: column;
-    max-width: 378px;
-}
-.card-title {
-    font-family: $text;
-    @include font($w500, $font-22, $black, $height-27);
-    letter-spacing: -0.06em;
-    margin-bottom: 11px;
-    text-transform: uppercase;
-    @include respond-to("tab") {
-        @include font($w500, $font-16, $black, $height-17);
-        margin-bottom: 6px;
-    }
-}
-.card-text {
-    @include font($w400, $font-18, $black, $height-20);
-    letter-spacing: -0.06em;
-    @include respond-to("tab") {
-        @include font($w400, $font-14, $black, $height-17);
-    }
-}
-
 //Карточки услуг
 .services__card-box {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    @include respond-to("tab") {
+        gap: 16px;
+    }
 }
 .services-card {
     flex: 0 1 calc((100% - 2 * 25px) / 3);
     display: flex;
     flex-direction: column;
-    border: 1px solid $primary20;
+    border: 1px solid var(--green);
     border-radius: 30px;
     min-height: 456px;
     @media (max-width: 1275px) {
@@ -76,12 +20,16 @@
     @include respond-to("tab") {
         flex: 0 1 100%;
         min-height: 348px;
+        border-radius: 18px;
     }
 }
 .services-card-img-wrap {
     position: relative;
     width: 100%;
     height: 195px;
+    @include respond-to("tab") {
+        height: 150px;
+    }
 }
 .services-card-img {
     border-radius: 30px 30px 0 0;
@@ -107,12 +55,12 @@
     }
 }
 .services-card-title {
-    @include font($w500, $font-20, $black, $height-24);
+    @include font(var(--fw-Medium), var(--fs-20), var(--primary-black), var(--lh-135));
     letter-spacing: -0.06em;
     margin-bottom: 10px;
     text-transform: uppercase;
     @include respond-to("tab") {
-        @include font($w500, $font-16, $black, $height-17);
+        font-size: var(--fs-16);
     }
 }
 .services-card-content {
@@ -123,9 +71,10 @@
     & > ul > li,
     ol > li,
     p {
-        @include font($w400, $font-18, $black, $height-20);
+        @include font(var(--fw-normal), var(--fs-18), var(--primary-black), var(--lh-130));
+        letter-spacing: -0.06em;
         @include respond-to("tab") {
-            @include font($w400, $font-14, $black, $height-17);
+            font-size: var(--fs-14);
         }
     }
     & > ul,
@@ -147,7 +96,8 @@
         display: flex;
         align-items: center;
         padding-left: 20px;
-        @include font($w400, $font-16, $black, $height-17);
+        @include font(var(--fw-normal), var(--fs-15), var(--primary-black), var(--lh-125));
+        letter-spacing: -0.06em;
         &::before {
             content: "";
             position: absolute;
@@ -155,21 +105,29 @@
             width: 5px;
             height: 5px;
             border-radius: 100%;
-            background-color: $black;
+            background-color: var(--primary-black);
         }
     }
 }
 .services__btn {
     align-self: flex-end;
     margin-right: 35px;
+    @include respond-to("tab") {
+        margin-right: 26px;
+    }
+}
+.services-card_mob-none {
+    @include respond-to("tab") {
+        display: none;
+    }
 }
 //Малые зеленые карточки
 
 .small-green-card {
     flex: 0 1 calc((100% - 1 * 20px) / (2));
-    border: 1px solid $primary20;
+    border: 1px solid var(--green);
     border-radius: 10px;
-    background: rgba(117, 110, 74, 0.85);
+    background-color: var(--banner-green-opacity);
     padding: 14px 14px 14px 14px;
     display: flex;
     gap: 13px;
@@ -189,10 +147,87 @@
     height: 14px;
 }
 .small-green-card__title {
-    @include font($w300, $font-16, $beige, $height-20);
+    @include font(var(--fw-light), var(--fs-16), var(--primary-beige), var(--lh-135));
     text-transform: uppercase;
     letter-spacing: -0.06em;
     @include respond-to("tab") {
-        @include font($w300, $font-12, $beige, $height-17);
+        font-size: var(--fs-12);
+    }
+}
+// карточка со звездой на зеленом фоне
+.primary-card {
+    flex: 0 1 calc((100% - 30px) / 2);
+    border: 1px solid var(--green);
+    border-radius: 18px;
+    background: var(--lite-green);
+    padding: 33px 75px;
+    display: flex;
+    gap: 24px;
+    min-height: 197px;
+    @include respond-to("pc-old") {
+        padding: 23px;
+    }
+    @include respond-to("tab") {
+        flex: 0 1 100%;
+        background: transparent;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.card__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    min-height: 38px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100%;
+    background-color: var(--green);
+    @include respond-to("tab") {
+        min-width: 28px;
+        min-height: 28px;
+    }
+}
+.card-text-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 378px;
+}
+.card-title {
+    font-family: var(--ff-text);
+    @include font(var(--fw-Medium), var(--fs-22), var(--primary-black), var(--lh-120));
+    letter-spacing: -0.06em;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    @include respond-to("tab") {
+        font-size: var(--fs-16);
+        margin-bottom: 6px;
+    }
+}
+.card-text {
+    @include font(var(--fw-normal), var(--fs-18), var(--card-text), var(--lh-130));
+    letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        font-size: var(--fs-14);
+    }
+}
+
+//карточки о нас
+.about__card {
+    display: flex;
+    padding: 35px 36px;
+    background-color: var(--green);
+    border-radius: 18px;
+    gap: 15px;
+}
+.about__card-title {
+    @include font(var(--fw-300), var(--fs-20), var(--primary-beige), var(--lh-135));
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    @include respond-to("tab") {
+        font-weight: var(--fw-400);
+        font-size: var(--fs-14);
+        line-height: var(--lh-125);
     }
 }

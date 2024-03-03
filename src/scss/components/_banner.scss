@@ -28,15 +28,12 @@
     }
 }
 .banner__title {
-    color: $beige;
     max-width: 860px;
+    margin-bottom: 10px;
 }
 .banner__subtitle {
-    @include font($w400, $font-22, $beige, $height-27);
-    max-width: 790px;
-    margin-bottom: 31px;
+    max-width: 723px;
     @include respond-to("tab") {
-        @include font($w400, $font-14, $beige, $height-17);
         margin-bottom: 25px;
     }
 }

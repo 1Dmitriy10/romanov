@@ -22,18 +22,19 @@
     }
 }
 .info__title {
-    font-family: $text;
-    @include font($w400, $font-14, $black, $height);
+    font-family: var(--ff-text);
+    @include font(var(--fw-400), var(--fs-14), var(--primary-black), var(--lh-120));
     letter-spacing: -0.08em;
     margin-bottom: 16px;
     text-transform: math-auto;
     @include respond-to("tab") {
-        @include font($w500, $font-12, $black, $height);
+        font-weight: var(--fw-500);
+        font-size: var(--fs-12);
     }
 }
 
 .info__text {
-    @include font($w400, $font-10, $black, $height);
+    @include font(var(--fw-400), var(--fs-10), var(--primary-black), var(--lh-120));
     letter-spacing: -0.08em;
     max-width: 917px;
 }

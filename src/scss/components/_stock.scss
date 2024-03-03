@@ -1,5 +1,5 @@
 .stock {
-    background-color: $brown;
+    background-color: var(--btn-banner);
 }
 .stock__container {
     padding: 145px 0 165px 0;
@@ -14,7 +14,7 @@
     }
 }
 .stock__title {
-    color: $beige;
+    color: var(--primary-beige);
 }
 .stock__card-box {
     display: flex;
@@ -37,7 +37,8 @@
     }
     @include respond-to("tab") {
         flex: 0 1 100%;
-        min-height: 287px;
+        min-height: 279px;
+        border-radius: 18px;
     }
 }
 .stock__card-bg {
@@ -46,6 +47,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
+    border: 1px solid rgb(239, 234, 229);
 }
 .stock__card-bg-mask {
     position: absolute;
@@ -61,37 +63,61 @@
     flex-direction: column;
     margin-top: auto;
     padding: 0 35px 50px;
+    @include respond-to("tab") {
+        padding: 0 20px 24px;
+    }
 }
 .stock__card-text {
-    @include font($w400, $font-18, $beige, $height-20);
+    @include font(var(--fw-300), var(--fs-18), var(--primary-beige), var(--lh-130));
     letter-spacing: -0.06em;
     margin-bottom: 15px;
     @include respond-to("tab") {
-        @include font($w400, $font-18, $beige, $height-24);
-        margin-bottom: 15px;
+        font-size: var(--fs-14);
+        margin-bottom: 0;
         max-width: 365px;
     }
 }
 .stock__card-prise-box {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     margin-bottom: 23px;
+    @include respond-to("tab") {
+        margin-bottom: 16px;
+        gap: 0;
+    }
 }
 .stock__card-prise {
-    font-family: $title;
-    @include font($w600, $font-40, $beige, $height-44);
+    font-family: var(--ff-title);
+    @include font(var(--fw-400), var(--fs-38), var(--primary-beige), var(--lh-130));
+    letter-spacing: -0.05em;
     align-self: flex-end;
     @include respond-to("tab") {
-        @include font($w400, $font-35, $beige, $height-34);
+        font-weight: var(--fw-400);
+        font-size: var(--fs-34);
+        letter-spacing: -0.06em;
     }
 }
 .stock__card-old-prise {
-    @include font($w500, $font-16, $beige, $height-20);
+    @include font(var(--fw-300), var(--fs-16), var(--primary-beige), var(--lh-120));
+    letter-spacing: -0.06em;
+    padding-top: 10px;
+    @include respond-to("tab") {
+        font-weight: var(--fw-400);
+        font-size: var(--fs-14);
+        line-height: var(--lh-130);
+    }
 }
 .stock__link {
     @include respond-to("tab") {
         margin-left: auto;
         margin-right: 47px;
+    }
+}
+.stock__btn {
+    align-self: flex-start;
+    @include respond-to("tab") {
+        align-self: flex-end;
+        margin-right: 28px;
     }
 }

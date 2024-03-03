@@ -5,12 +5,15 @@
     align-items: center;
 }
 .input-search {
+    font-family: var(--ff-text);
     width: 194px;
     padding: 12px 5px;
     background-color: transparent;
-    border-bottom: 1px solid $beige;
+    border-bottom: 1px solid var(--primary-beige);
     &::placeholder {
-        @include font($w500, $font-18, $secondary50, $height-22);
+        font-family: var(--ff-text);
+        @include font(var(--fw-normal), var(--fs-18), var(--lite-green), var(--lh-120));
+        letter-spacing: -0.1em;
     }
     @include respond-to("nout") {
         max-width: 160px;

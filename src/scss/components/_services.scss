@@ -22,3 +22,13 @@
         display: flex;
     }
 }
+.services_btn {
+    display: none;
+    width: 100%;
+    @include font(var(--fw-500), var(--fs-14), var(--primary-beige), var(--lh-125));
+    text-transform: none;
+    letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        display: flex;
+    }
+}

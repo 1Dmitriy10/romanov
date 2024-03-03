@@ -1,5 +1,5 @@
 .statistic-box_dark {
-    border: 1px solid $secondary50;
+    border: 1px solid var(--lite-green);
     margin-top: 0;
     width: 366px;
     @include respond-to("tab") {
@@ -7,20 +7,20 @@
     }
 }
 .static-item-num_dark {
-    color: $black;
+    color: var(--primary-black);
     line-height: 5.81rem;
 }
 .static-item-text_dark {
-    color: $black;
+    color: var(--primary-black);
 }
 .statistic-item {
     padding: 0 5px;
     &:first-child {
-        border-right: 1px dashed $secondary50;
+        border-right: 1px dashed var(--lite-green);
     }
     @include respond-to("tab") {
         &:first-child {
-            border-right: 1px solid $secondary50;
+            border-right: 1px solid var(--lite-green);
         }
     }
 }
@@ -28,12 +28,12 @@
     gap: 6px;
     @include respond-to("tab") {
         &:nth-child(1) {
-            border-top: 1px solid $secondary50;
-            border-bottom: 1px solid $secondary50;
+            border-top: 1px solid var(--lite-green);
+            border-bottom: 1px solid var(--lite-green);
         }
         &:nth-child(2) {
-            border-top: 1px solid $secondary50;
-            border-bottom: 1px solid $secondary50;
+            border-top: 1px solid var(--lite-green);
+            border-bottom: 1px solid var(--lite-green);
         }
     }
 }
@@ -69,18 +69,24 @@
     }
 }
 .expert__slide-title {
-    font-family: $text;
-    @include font($w500, $font-20, $black, $height-22);
+    font-family: var(--ff-text);
+    @include font(var(--fw-500), var(--fs-20), var(--primary-black), var(--lh-130));
     letter-spacing: -0.06em;
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
+    @include respond-to("tab") {
+        font-size: var(--fs-16);
+    }
 }
 .expert__slide-text {
-    @include font($w400, $font-18, $black, $height-17);
+    @include font(var(--fw-400), var(--fs-18), var(--primary-black), var(--lh-120));
     letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        font-size: var(--fs-14);
+    }
 }
 .expert__slider-box {
-    margin-bottom: 37px;
+    margin-bottom: 19px;
 }
 .expert__down-row {
     display: flex;
@@ -102,5 +108,12 @@
 .slider__btn-box-expert {
     @include respond-to("tel") {
         align-self: flex-end;
+    }
+}
+.expert__btn-bloc-box {
+    align-self: flex-end;
+    margin-right: 48px;
+    @include respond-to("tab") {
+        align-self: flex-start;
     }
 }

@@ -1,3 +1,91 @@
+//
+.primary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-black);
+    border-radius: 5px;
+    padding: 15px 15px;
+    //
+    @include font(var(--fw-normal), var(--fs-16), var(--primary-black), var(--lh-130));
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+}
+.primary-btn_bg {
+    color: var(--primary-beige);
+    background-color: var(--green);
+    border: transparent;
+}
+.primary-btn_form {
+    font-family: var(--ff-text);
+    background-color: var(--btn-banner);
+    color: var(--primary-beige);
+    border-radius: 15px;
+    @include font(var(--fw-400), var(--fs-20), var(--primary-beige), var(--lh-120));
+    text-transform: none;
+    padding: 20px 15px;
+    letter-spacing: -0.06em;
+    border: transparent;
+}
+
+//кнопки в блоках
+.btn-bloc-box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: fit-content;
+    &:hover {
+        & > .btn-bloc-circle {
+            transition: 0.3s;
+            transform: scale(1.1);
+        }
+    }
+}
+.btn-bloc {
+    position: relative;
+    z-index: 2;
+    font-family: var(--ff-text);
+    @include font(var(--fw-normal), var(--fs-24), var(--primary-black), var(--lh-100));
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    @include respond-to("tab") {
+        font-weight: var(--fw-500);
+        font-size: var(--fs-14);
+    }
+}
+.btn-bloc-circle {
+    position: absolute;
+    right: -40px;
+    background-color: var(--btn-green);
+    border-radius: 100%;
+    min-width: 62px;
+    height: 62px;
+    transition: 0.3s;
+    //
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    @include respond-to("tab") {
+        min-width: 38px;
+        height: 38px;
+        right: -27px;
+        & > svg {
+            width: 13px;
+            height: 16px;
+        }
+    }
+}
+.btn-bloc_banner {
+    color: var(--primary-beige);
+}
+.btn-bloc-circle_banner {
+    background-color: var(--btn-banner);
+}
+.btn-bloc-circle_br {
+    background-color: var(--btn-brown);
+}
+
 //кнопка записаться онлайн
 .btn-sign-up-box {
     position: relative;
@@ -7,11 +95,13 @@
 }
 .btn-sign-up {
     padding: 10px 39px 10px 0;
-    border-bottom: 1px solid $beige;
+    border-bottom: 1px solid var(--primary-beige);
     text-transform: uppercase;
-    color: $beige;
+    @include font(var(--fw-normal), var(--fs-16), var(--primary-beige), var(--lh-130));
+    font-family: var(--ff-text);
+    letter-spacing: -0.1em;
     @media (max-width: 1240px) {
-        font-size: $font-14;
+        font-size: var(--fs-14);
     }
     @include respond-to("nout") {
         padding: 10px 25px 10px 0;
@@ -27,173 +117,71 @@
         height: 100%;
     }
 }
-
-//кнопка стандартная
-.btn-regular {
+//кнопки в карточках
+.btn-card-box {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 10px;
-    min-width: 195px;
-    border: 1px solid $black;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-//кнопка стандартная вторая
-
-.btn-regular_secondary {
-    color: $beige;
-    background-color: $primary20;
-    border: 1px solid transparent;
-}
-
-//кнопка стандартная третья
-.btn-regular_third {
-    background-color: $brown;
-    border: 1px solid transparent;
-    letter-spacing: -0.06em;
-    @include font($w400, $font-20, $beige, $height-24);
-    // width: auto;
-}
-
-//кнопка с кругом
-.btn-circle-box {
     position: relative;
-    display: flex;
     align-items: center;
-    width: fit-content;
     &:hover {
-        & .btn-circle-circle {
+        & > .btn-card-circle {
             transition: 0.3s;
-            width: 5rem;
-            height: 5rem;
-            transform: translateX(10px);
-        }
-    }
-    @include respond-to("tab") {
-        &:hover {
-            & .btn-circle-circle {
-                width: 3.5rem;
-                height: 3.5rem;
-                transform: translateX(5px);
-            }
+            transform: scale(1.1);
         }
     }
 }
-.btn-circle {
-    position: relative;
-    z-index: 1;
-    @include font($w500, $font-24, $black, $height-29);
-    text-transform: uppercase;
+.btn-card {
+    @include font(var(--fw-400), var(--fs-16), var(--primary-black), var(--lh-120));
     letter-spacing: -0.06em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
     @include respond-to("tab") {
-        @include font($w500, $font-14, $black, $height-17);
+        font-size: var(--fs-12);
     }
 }
-.btn-circle-circle {
+.btn-card-circle {
     position: absolute;
-    right: -45px;
-    z-index: 0;
+    right: -35px;
+    border-radius: 100%;
+    background-color: var(--btn-green);
+    min-width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.88rem;
-    height: 3.88rem;
-    border-radius: 100%;
-    background: $brown-btn;
+    padding-top: 3px;
     transition: 0.3s;
     @include respond-to("tab") {
-        width: 3rem;
-        height: 3rem;
+        min-width: 36px;
+        height: 36px;
+        right: -26px;
+        & > svg {
+            width: 12px;
+            height: 15px;
+        }
     }
 }
-
-//кнопка с кругом белая
-.btn-circle_white {
-    color: $beige;
+.btn-card_white {
+    color: var(--primary-beige);
 }
-.btn-circle-circle_white {
-    right: -38px;
-    padding-right: 10px;
-    justify-content: flex-end;
+.btn-card-circle_white {
+    background-color: var(--green);
 }
-
-//кнопка 2 с кругом белая
-.btn-circle-box_green {
+.btn-card-box_no-c {
     &:hover {
-        & .btn-circle-circle {
-            width: 3.5rem;
-            height: 3.5rem;
+        & > .btn-card-circle_no-c {
             transform: translateX(5px);
         }
     }
+}
+.btn-card_no-c {
+    font-size: var(--fs-20);
     @include respond-to("tab") {
-        &:hover {
-            & .btn-circle-circle {
-                width: 3rem;
-                height: 3rem;
-                transform: translateX(5px);
-            }
-        }
+        font-size: var(--fs-16);
     }
 }
-.btn-circle_green {
-    color: $beige;
-    font-size: $font-16;
-    @include respond-to("tab") {
-        @include font($w500, $font-12, $beige, $height-17);
-    }
-}
-.btn-circle-circle_green-big {
-    background-color: var(--secondary-green-opacity);
-}
-.btn-circle-circle_green {
-    right: -34px;
-    width: 3.2rem;
-    height: 3.13rem;
-    padding-right: 15.5px;
-    justify-content: flex-end;
-    background-color: $card-green-opacity;
-    @include respond-to("tab") {
-        width: 2.7rem;
-        height: 2.7rem;
-    }
-}
-//кнопка 2 с кругом черная
-.btn-circle_green_black {
-    color: $black;
-}
-.btn-circle-opacity {
+.btn-card-circle_no-c {
+    transition: 0.3s;
     background-color: transparent;
-}
-//js анимация
-._btn-underline-js {
-    &:hover {
-        & ._underline-js {
-            background-size: 100% 1.5px;
-        }
-    }
-}
-._underline-js {
-    text-transform: uppercase;
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 1.5px;
-    transition: background-size 0.3s;
-}
-
-// кнопки слайдера
-.slider__btn-box {
-}
-
-//кнопка формы
-.btn-regular-gorm {
-    background-color: $brown;
-    color: $beige;
-    border: none;
-    padding: 23px 15px;
-    border-radius: 10px;
+    right: -15px;
 }

@@ -28,10 +28,10 @@
     }
 }
 .header__row_white {
-    border: 1px solid $beige;
+    border: 1px solid var(--primary-beige);
     border-radius: 7px;
     box-shadow: 0rem 0.25rem 0.38rem 0rem rgba(0, 0, 0, 0.25);
-    background: $beige;
+    background: var(--primary-beige);
     padding: 10px 15px 10px 15px;
     @include respond-to("tab") {
         display: none;
@@ -44,6 +44,7 @@
     }
 }
 .logo-img {
+    width: 190px;
     @include respond-to("pc-old") {
         width: 170px;
     }
@@ -60,7 +61,7 @@
     align-items: flex-start;
 }
 .header__address-box {
-    margin-right: r(35);
+    margin-right: 3.1875rem;
     @media (max-width: 1230px) {
         margin-right: r(20);
     }
@@ -73,16 +74,20 @@
     }
 }
 .address {
-    @include font($w500, $font-18, $beige, $height-22);
+    @include font(var(--fw-normal), var(--fs-18), var(--primary-beige), var(--lh-120));
     letter-spacing: -0.1em;
     @include respond-to("pc-old") {
-        @include font($w500, $font-16, $beige, $height-20);
+        font-size: var(--fs-18);
     }
 }
 .address-route {
-    @include font($w400, $font-16, $beige, $height-20);
-    // letter-spacing: -0.1em;
-    border-bottom: 1px solid rgb(239, 234, 229);
+    font-family: var(--text);
+    @include font(var(--fw-light), var(--fs-16), var(--primary-beige), var(--lh-120));
+    letter-spacing: -0.1em;
+    text-decoration-line: underline;
+    @include respond-to("pc-old") {
+        font-size: var(--fs-14);
+    }
 }
 .contacts-box {
     display: flex;
@@ -99,15 +104,18 @@
     }
 }
 .tel {
-    @include font($w500, $font-18, $beige, $height-20);
+    @include font(var(--fw-normal), var(--fs-18), var(--primary-beige), var(--lh-120));
     letter-spacing: -0.1em;
     @include respond-to("pc-old") {
-        @include font($w500, $font-16, $beige, $height-20);
+        font-size: var(--fs-16);
     }
 }
 .schedule {
-    @include font($w400, $font-16, $beige, $height-20);
+    @include font(var(--fw-light), var(--fs-16), var(--primary-beige), var(--lh-120));
     letter-spacing: -0.1em;
+    @include respond-to("pc-old") {
+        font-size: var(--fs-14);
+    }
 }
 .header__icons-box {
     margin-right: r(24);
@@ -115,18 +123,18 @@
 .header__input-search-box {
     margin-right: r(15);
 }
-.header__btn-regular:not(:last-child) {
-    margin-right: r(14);
-}
-.header__btn-regular {
+
+.header__btn {
+    width: 195px;
     @include respond-to("pc-old") {
-        padding: 10px 5px;
-        min-width: 150px;
+        width: 170px;
+        font-size: var(--fs-14);
     }
     @include respond-to("nout") {
-        display: none !important;
+        display: none;
     }
 }
+
 //======меню========
 ._arrow-js {
     display: flex;
@@ -175,7 +183,7 @@
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 23px;
+    gap: 21px;
     @include respond-to("pc-old") {
         gap: 10px;
     }
@@ -194,18 +202,19 @@
     }
 }
 .nav-btn {
-    padding: 10px 10px;
+    padding: 10px 15px;
+    text-transform: none;
     @include respond-to("pc-old") {
         min-width: 160px;
     }
 }
 .nav-link {
-    @include font($w400, $font-18, $black, $height-22);
+    @include font(var(--fw-normal), var(--fs-18), var(--primary-black), var(--lh-120));
     align-self: center;
     padding: 5px 0;
     letter-spacing: -0.1em;
     @include respond-to("pc-old") {
-        @include font($w400, $font-16, $black, $height-20);
+        font-size: var(--fs-16);
     }
 }
 //------второй уровень--------
@@ -217,7 +226,7 @@
     left: 0;
     top: 40px;
     transition: 0.3s;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 .first__nav-2lv {
     left: -20px;
@@ -226,7 +235,7 @@
     position: relative;
     padding: 17px 23px 17px 12px;
     border-radius: 10px;
-    background: $beige;
+    background-color: var(--primary-beige);
     display: flex;
     flex-direction: column;
     width: max-content;
@@ -260,10 +269,10 @@
     }
 }
 .nav-link-lv-2 {
-    font-size: $font-16;
+    font-size: var(--fs-16);
 }
 .nav-link-lv-3 {
-    font-size: $font-16;
+    font-size: var(--fs-16);
     padding: 5px 0;
 }
 .nav-3lv {
@@ -278,7 +287,7 @@
 }
 .nav-list-3lv {
     border-radius: 0px 10px 10px 0px;
-    background: $primary20;
+    background-color: var(--banner-green-opacity);
     padding: 17px 12px;
     display: flex;
     flex-direction: column;
@@ -289,9 +298,8 @@
 }
 .nav-item-lv-3 {
     display: flex;
-    // height: 100%;
     & .nav-link {
-        color: $beige;
+        color: var(--primary-beige);
     }
 }
 .link-underline {
@@ -321,14 +329,13 @@
         top: 1px !important;
     }
 }
-.header__btn-regular_mob {
-    // display: flex ;
-}
 .mob-tel {
-    @include font($w500, $font-18, $black, $height-22);
+    @include font(var(--fw-Medium), var(--fs-18), var(--primary-black), var(--lh-120));
+    letter-spacing: -0.1em;
 }
 .mob-schedule {
-    @include font($w400, $font-16, $black, $height-20);
+    @include font(var(--fw-normal), var(--fs-16), var(--primary-black), var(--lh-120));
+    letter-spacing: -0.1em;
 }
 .mob-nav-list {
     height: 100%;
@@ -347,7 +354,7 @@
 }
 .mob-nav-item {
     position: relative;
-    @include font($w400, $font-22, $black, $height-27);
+    @include font(var(--fw-normal), var(--fs-22), var(--primary-black), var(--lh-120));
     letter-spacing: -0.1em;
     padding-left: 0;
     padding-right: 8px;
@@ -395,8 +402,8 @@
 }
 .mob-nav-item-lv-2 {
     position: relative;
-    @include font($w400, $font-16, $black, $height-20);
-    letter-spacing: -0.1em;
+    @include font(var(--fw-Medium), var(--fs-16), var(--primary-black), var(--lh-120));
+    letter-spacing: -0.11em;
     padding-left: 0;
     padding-right: 8px;
     width: fit-content;
@@ -427,8 +434,8 @@
 .mob-nav-list-lv-3 {
 }
 .mob-nav-item-lv-3 {
-    @include font($w300, $font-16, $black, $height-20);
-    letter-spacing: -0.1em;
+    @include font(var(--fw-light), var(--fs-16), var(--primary-black), var(--lh-120));
+    letter-spacing: -0.11em;
 }
 .mob-nav-list-lv-2 {
     margin: 11px 0;

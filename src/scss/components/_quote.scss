@@ -3,11 +3,11 @@
 .quote__container {
 }
 .quote__text {
-    font-family: $title;
+    font-family: var(--ff-title);
     position: relative;
     display: flex;
     flex-direction: column;
-    @include font($w400, $font-38, $black, $height-46);
+    @include font(var(--fw-normal), var(--fs-38), var(--primary-black), var(--lh-120));
     letter-spacing: -0.05em;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -33,10 +33,11 @@
         right: -25px;
     }
     @include respond-to("nout") {
-        @include font($w400, $font-30, $black, $height-34);
+        font-size: var(--fs-30);
     }
     @include respond-to("tab") {
-        @include font($w500, $font-21, $black, $height-24);
+        font-size: var(--fs-21);
+        font-weight: var(--fw-Medium);
         padding: 0;
         &::before {
             content: none;
@@ -48,8 +49,8 @@
 }
 .quote__text_lite {
     @include respond-to("tab") {
-        font-family: $text;
-        @include font($w400, $font-14, $black, $height-17);
+        font-family: var(ff-text);
+        @include font(var(--fw-normal), var(--fs-14), var(--primary-black), var(--lh-120));
         margin-top: 20px;
         display: flex;
         flex-direction: column;
@@ -64,7 +65,7 @@
             top: 0;
         }
         & svg {
-            fill: $black;
+            fill: var(--primary-black);
         }
     }
 }

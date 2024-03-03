@@ -29,7 +29,7 @@
 }
 .partners__img-wrap {
     position: relative;
-    border: 1px solid $primary20;
+    border: 1px solid var(--green);
     border-radius: 18px;
     height: 180px;
     display: flex;
@@ -40,20 +40,20 @@
 .partners-img {
 }
 .partners__card-title {
-    font-family: $text;
-    @include font($w500, $font-20, $black, $height-24);
+    font-family: var(--ff-text);
+    @include font(var(--fw-500), var(--fs-20), var(--primary-black), var(--lh-120));
     letter-spacing: -0.06em;
     margin-bottom: 10px;
     text-transform: uppercase;
     @include respond-to("tab") {
-        @include font($w500, $font-20, $black, $height-22);
+        font-size: var(--fs-14);
     }
 }
 .partners__card-text {
-    @include font($w500, $font-14, $black, $height-20);
+    @include font(var(--fw-400), var(--fs-18), var(--primary-black), var(--lh-120));
     letter-spacing: -0.06em;
     @include respond-to("tab") {
-        @include font($w400, $font-12, $black, $height-17);
+        font-size: var(--fs-12);
     }
 }
 .partners__img-wrap.fancybox__content {

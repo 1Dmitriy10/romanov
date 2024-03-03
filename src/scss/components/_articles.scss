@@ -6,12 +6,15 @@
 }
 .articles__title {
     max-width: 797px;
+    @include respond-to("tab") {
+        font-size: var(--fs-30);
+    }
 }
 .articles__card-box {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 46px;
+    margin-bottom: 57px;
     @include respond-to("nout") {
         margin-bottom: 24px;
     }
@@ -22,7 +25,7 @@
 .articles__card {
     flex: 0 1 calc((100% - 2 * 30px) / 3);
     border-radius: 30px;
-    background-color: $secondary50;
+    background-color: var(--lite-green);
     min-height: 360px;
     display: flex;
     flex-direction: column;
@@ -34,6 +37,7 @@
         padding-bottom: 23px;
         flex: 0 1 calc((100% - 1 * 16px) / 2);
         min-height: 272px;
+        border-radius: 16px;
     }
     @include respond-to("tel") {
         flex: 0 1 100%;
@@ -54,6 +58,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 30px 30px 0 0;
+    @include respond-to("tab") {
+        border-radius: 16px 16px 0 0;
+    }
 }
 .articles__card-img-mask {
     position: absolute;
@@ -67,38 +74,41 @@
 .articles__card-content-box {
     display: flex;
     flex-direction: column;
-    padding: 30px 30px 0 30px;
+    padding: 30px 30px 0 34px;
     @include respond-to("tab") {
         padding: 23px 23px 0 23px;
     }
 }
 .articles__card-title {
-    @include font($w500, $font-20, $black, $height-22);
-    letter-spacing: -0.06em;
+    @include font(var(--fw-500), var(--fs-20), var(--primary-black), var(--lh-125));
+    letter-spacing: -0.05em;
     text-transform: uppercase;
     margin-bottom: 10px;
     @include respond-to("nout") {
-        @include font($w500, $font-16, $black, $height-17);
+        font-size: var(--fs-16);
     }
 }
 .articles__card-text {
-    @include font($w400, $font-18, $black, $height-20);
+    @include font(var(--fw-400), var(--fs-18), var(--primary-black), var(--lh-130));
     letter-spacing: -0.06em;
     @include respond-to("nout") {
-        @include font($w400, $font-14, $black, $height);
+        font-size: var(--fs-14);
     }
 }
 .articles__card-date-box {
     display: flex;
     gap: 17px;
     margin-top: auto;
-    padding: 0 30px;
+    padding: 0 34px;
+    @include respond-to("tab") {
+        padding: 0 23px;
+    }
 }
 .articles__card-date {
-    @include font($w400, $font-14, $black, $height-17);
+    @include font(var(--fw-400), var(--fs-14), var(--article-date), var(--lh-100));
     letter-spacing: -0.08em;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     &::before {
         content: "";
         display: flex;
@@ -108,7 +118,7 @@
         margin-right: 10px;
     }
     @include respond-to("tab") {
-        @include font($w400, $font-12, $black, $height);
+        font-size: var(--fs-12);
         &::before {
             min-width: 12px;
             height: 12px;
@@ -116,10 +126,10 @@
     }
 }
 .articles__card-watch {
-    @include font($w400, $font-14, $black, $height-17);
+    @include font(var(--fw-400), var(--fs-14), var(--article-date), var(--lh-100));
     letter-spacing: -0.08em;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     &::before {
         content: "";
         display: flex;
@@ -129,10 +139,14 @@
         margin-right: 10px;
     }
     @include respond-to("tab") {
-        @include font($w400, $font-12, $black, $height);
+        font-size: var(--fs-12);
         &::before {
             min-width: 12px;
             height: 12px;
         }
     }
+}
+.articles__btn-bloc-box {
+    align-self: flex-end;
+    margin-right: 44px;
 }

@@ -1,5 +1,5 @@
 .results {
-    background-color: $brown;
+    background-color: var(--btn-banner);
     overflow: hidden;
 }
 .results__container {
@@ -19,7 +19,7 @@
     margin-bottom: 16px;
 }
 .results__title {
-    color: $beige;
+    color: var(--primary-beige);
     flex: 0 1 68%;
     margin-bottom: 0;
     @include respond-to("tab") {
@@ -29,12 +29,12 @@
 .statistic-box {
     display: grid;
     grid-template-columns: 40% 60%;
-    border: 1px solid $beige;
+    border: 1px solid var(--primary-beige);
     border-radius: 18px;
     max-width: 371px;
     padding-left: 10px;
     align-self: flex-start;
-    margin-top: 20px;
+    margin-top: 8px;
     @include respond-to("tab") {
         grid-template-columns: repeat(2, 1fr);
         border: none;
@@ -56,44 +56,42 @@
         width: 100%;
         align-items: center;
         &:nth-child(odd) {
-            border-bottom: 1px solid $beige;
-            border-right: 1px solid $beige;
+            border-bottom: 1px solid var(--primary-beige);
+            border-right: 1px solid var(--primary-beige);
         }
         &:nth-child(even) {
-            border-bottom: 1px solid $beige;
+            border-bottom: 1px solid var(--primary-beige);
         }
         &:nth-child(1) {
-            border-top: 1px solid $beige;
+            border-top: 1px solid var(--primary-beige);
         }
         &:nth-child(2) {
-            border-top: 1px solid $beige;
+            border-top: 1px solid var(--primary-beige);
         }
     }
 }
 .static-item-num {
-    font-family: $title;
-    @include font($w400, $font-90, $beige, $height-109);
+    font-family: var(--ff-title);
+    @include font(var(--fw-300), var(--fs-90), var(--primary-beige), var(--lh-120));
     @include respond-to("tab") {
-        @include font($w400, $font-52, $beige, $height-63);
+        font-size: var(--fs-52);
     }
 }
 .static-item-text {
-    @include font($w400, $font-16, $beige, $height-20);
+    @include font(var(--fw-300), var(--fs-16), var(--primary-beige), var(--lh-130));
     letter-spacing: -0.06em;
     text-align: center;
     margin-bottom: 22px;
     @include respond-to("tab") {
-        @include font($w400, $font-14, $beige, $height-17);
+        font-size: var(--fs-14);
     }
 }
 .results__subtitle {
-    @include font($w400, $font-22, $beige, $height-27);
-    letter-spacing: -0.06em;
     text-transform: uppercase;
     margin-bottom: 40px;
     @include respond-to("tab") {
         margin-bottom: 60px;
-        @include font($w400, $font-14, $beige, $height-17);
+        font-size: var(--fs-14);
     }
 }
 .results__slider-box {
@@ -131,9 +129,12 @@
     border-radius: 30px;
 }
 .result__slide-text {
-    @include font($w400, $font-14, $beige, $height-17);
-    letter-spacing: -0.06em;
+    @include font(var(--fw-300), var(--fs-18), var(--primary-beige), var(--lh-120));
+    letter-spacing: -0.05em;
     @include respond-to("tab") {
+        font-size: var(--fs-14);
+        font-weight: var(--fw-400);
+        letter-spacing: -0.06em;
     }
 }
 #result--clone {
