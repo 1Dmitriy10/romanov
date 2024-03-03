@@ -338,7 +338,8 @@
     letter-spacing: -0.1em;
 }
 .mob-nav-list {
-    height: 100%;
+    // height: 100%;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     gap: 14px;

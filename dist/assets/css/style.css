@@ -1558,7 +1558,7 @@ section:last-child {
 }
 
 .mob-nav-list {
-  height: 100%;
+  margin-bottom: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
