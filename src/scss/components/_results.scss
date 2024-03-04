@@ -89,6 +89,7 @@
 .results__subtitle {
     text-transform: uppercase;
     margin-bottom: 40px;
+    letter-spacing: -0.06em;
     @include respond-to("tab") {
         margin-bottom: 60px;
         font-size: var(--fs-14);

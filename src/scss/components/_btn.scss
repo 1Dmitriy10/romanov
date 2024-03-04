@@ -173,9 +173,15 @@
             transform: translateX(5px);
         }
     }
+    @include respond-to("tab") {
+        width: 95%;
+    }
 }
 .btn-card_no-c {
     font-size: var(--fs-20);
+    @media (max-width: 1250px) {
+        font-size: var(--fs-18);
+    }
     @include respond-to("tab") {
         font-size: var(--fs-16);
     }
@@ -184,4 +190,5 @@
     transition: 0.3s;
     background-color: transparent;
     right: -15px;
+    padding-top: 0;
 }

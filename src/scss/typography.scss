@@ -15,8 +15,8 @@ h2 {
 
 h1 {
     font-family: var(--ff-title);
-    @include font(var(--fw-normal), var(--fs-52), var(--primary-beige), var(--lh-120));
-    margin-bottom: 20px;
+    @include font(var(--fw-normal), var(--fs-52), var(--primary-beige), var(--lh-125));
+    margin-bottom: 15px;
     letter-spacing: -0.1em;
     text-transform: uppercase;
     @include respond-to("nout") {
@@ -30,7 +30,7 @@ h1 {
 h3 {
     font-family: var(--ff-text);
     @include font(var(--fw-light), var(--fs-22), var(--primary-beige), var(--lh-130));
-    letter-spacing: -0.06em;
+    letter-spacing: -0.1em;
     margin-bottom: 30px;
     @include respond-to("nout") {
         font-size: var(--fs-16);
@@ -55,4 +55,5 @@ p {
 .ceremonious {
     font-family: "Ceremonious One Regular";
     display: inline;
+    letter-spacing: -0.08em;
 }

@@ -48,6 +48,9 @@
     object-fit: cover;
     border-radius: 30px;
     border: 1px solid rgb(239, 234, 229);
+    @include respond-to("tab") {
+        border-radius: 18px;
+    }
 }
 .stock__card-bg-mask {
     position: absolute;
@@ -55,6 +58,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
+    @include respond-to("tab") {
+        border-radius: 18px;
+    }
 }
 .stock__card-content {
     position: relative;
@@ -70,7 +76,7 @@
 .stock__card-text {
     @include font(var(--fw-300), var(--fs-18), var(--primary-beige), var(--lh-130));
     letter-spacing: -0.06em;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     @include respond-to("tab") {
         font-size: var(--fs-14);
         margin-bottom: 0;
@@ -84,7 +90,7 @@
     margin-bottom: 23px;
     @include respond-to("tab") {
         margin-bottom: 16px;
-        gap: 0;
+        gap: 8;
     }
 }
 .stock__card-prise {
