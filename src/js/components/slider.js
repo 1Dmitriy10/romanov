@@ -85,7 +85,7 @@ export const expertSlider = new Swiper('.expert-slider', {
     /*Отступ у карточек*/
     spaceBetween: 20,
     /*Показывать по n карточек*/
-    slidesPerView: 1,
+    slidesPerView: 2,
 
     /*Брек-поинты*/
     breakpoints: {

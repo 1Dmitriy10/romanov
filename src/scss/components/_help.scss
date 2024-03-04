@@ -72,7 +72,8 @@
     flex-wrap: wrap;
     @include respond-to("tab") {
         flex-direction: column;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
+        gap: 10px;
     }
 }
 .form__row_text {
@@ -131,7 +132,7 @@ input::placeholder {
 .form__btn {
     margin-bottom: 18px;
     @include respond-to("tab") {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
         border-radius: 10px;
         padding: 16px 15px;
         font-size: var(--fs-14);

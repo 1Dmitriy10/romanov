@@ -332,7 +332,7 @@ const expertSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('
     /*Отступ у карточек*/
     spaceBetween: 20,
     /*Показывать по n карточек*/
-    slidesPerView: 1,
+    slidesPerView: 2,
 
     /*Брек-поинты*/
     breakpoints: {

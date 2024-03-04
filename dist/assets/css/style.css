@@ -103,6 +103,7 @@ span {
   --fs-38: 2.38rem;
   --fs-36: 2.25rem;
   --fs-40: 2.5rem;
+  --fs-44: 2.75rem;
   --fs-52: 3.25rem;
   --fs-68: 4.25rem;
   --fs-80: 5rem;
@@ -684,6 +685,8 @@ section:last-child {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 10px;
+    padding: 31px 23px 20px 23px;
+    min-height: auto;
   }
 }
 
@@ -2903,7 +2906,7 @@ a.footer__down-tex {
 @media (max-width: 768px) {
   .about__advent-box {
     margin-bottom: 33px;
-    margin-top: 3px;
+    margin-top: 45px;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[2];
@@ -2933,18 +2936,19 @@ a.footer__down-tex {
     -ms-flex-align: center;
     align-items: center;
   }
-  .about__advent-item:nth-child(odd) {
-    border-bottom: 1px solid var(--green);
-    border-right: 1px solid var(--green);
-  }
-  .about__advent-item:nth-child(even) {
-    border-bottom: 1px solid var(--green);
-  }
   .about__advent-item:nth-child(1) {
     border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
   }
   .about__advent-item:nth-child(2) {
     border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+  }
+  .about__advent-item:nth-child(3) {
+    border-bottom: 1px solid var(--green);
+  }
+  .about__advent-item:nth-child(4) {
+    border-bottom: 1px solid var(--green);
   }
 }
 
@@ -2959,8 +2963,9 @@ a.footer__down-tex {
 }
 @media (max-width: 768px) {
   .about__advent-item-num {
-    font-size: var(--fs-40);
-    margin-bottom: 0;
+    font-size: var(--fs-44);
+    margin-bottom: 11px;
+    margin-top: 14px;
   }
 }
 
@@ -2975,7 +2980,7 @@ a.footer__down-tex {
   .about__advent-item-text {
     font-size: var(--fs-14);
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 14px;
   }
 }
 
@@ -3165,9 +3170,9 @@ a.footer__down-tex {
 @media (max-width: 768px) {
   .about__card {
     -webkit-box-flex: 0;
-    -ms-flex: 0 1 calc((100% - 20px) / 2);
-    flex: 0 1 calc((100% - 20px) / 2);
-    padding: 23px;
+    -ms-flex: 0 1 calc((100% - 10px) / 2);
+    flex: 0 1 calc((100% - 10px) / 2);
+    padding: 23px 23px 18px 23px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3175,6 +3180,7 @@ a.footer__down-tex {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    gap: 11px;
   }
 }
 
@@ -3426,7 +3432,7 @@ a.footer__down-tex {
     width: 100%;
     margin-bottom: 20px;
     padding-left: 0;
-    margin-top: 0;
+    margin-top: 10px;
   }
 }
 
@@ -3513,6 +3519,11 @@ a.footer__down-tex {
 .results__slider-box {
   margin-bottom: 45px;
 }
+@media (max-width: 768px) {
+  .results__slider-box {
+    margin-bottom: 25px;
+  }
+}
 
 .result-slider {
   width: auto !important;
@@ -3594,7 +3605,7 @@ a.footer__down-tex {
 
 .static-item-num_dark {
   color: var(--primary-black);
-  line-height: 5.81rem;
+  line-height: var(--lh-120);
 }
 
 .static-item-text_dark {
@@ -3618,12 +3629,15 @@ a.footer__down-tex {
 }
 @media (max-width: 768px) {
   .statistic-item-dark:nth-child(1) {
-    border-top: 1px solid var(--lite-green);
-    border-bottom: 1px solid var(--lite-green);
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
   }
   .statistic-item-dark:nth-child(2) {
-    border-top: 1px solid var(--lite-green);
-    border-bottom: 1px solid var(--lite-green);
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+  }
+  .statistic-item-dark:first-child {
+    border-right: 1px solid var(--green);
   }
 }
 
@@ -3646,6 +3660,12 @@ a.footer__down-tex {
   position: relative;
   border-radius: 18px;
   margin-bottom: 31px;
+}
+@media (max-width: 768px) {
+  .expert__slider-img-wrap {
+    height: 205px;
+    margin-bottom: 17px;
+  }
 }
 
 .expert__slider-img {
@@ -3837,6 +3857,7 @@ a.footer__down-tex {
   .partners__img-wrap {
     border-radius: 16px;
     height: 100px;
+    margin-bottom: 14px;
   }
 }
 
@@ -3995,7 +4016,8 @@ a.footer__down-tex {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    gap: 10px;
   }
 }
 
@@ -4130,7 +4152,7 @@ input::placeholder {
 }
 @media (max-width: 768px) {
   .form__btn {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     border-radius: 10px;
     padding: 16px 15px;
     font-size: var(--fs-14);
