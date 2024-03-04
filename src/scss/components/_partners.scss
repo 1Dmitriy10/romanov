@@ -23,9 +23,12 @@
     @include respond-to("tab") {
         flex: 0 1 calc((100% - 1 * 10px) / 2);
     }
-    @include respond-to("tel") {
+    @media (max-width: 350px) {
         flex: 0 1 100%;
     }
+    // @include respond-to("tel") {
+    //     flex: 0 1 100%;
+    // }
 }
 .partners__img-wrap {
     position: relative;
@@ -36,8 +39,16 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+    @include respond-to("tab") {
+        border-radius: 16px;
+        height: 100px;
+    }
 }
 .partners-img {
+    @include respond-to("tab") {
+        border-radius: 16px;
+        width: 105px;
+    }
 }
 .partners__card-title {
     font-family: var(--ff-text);

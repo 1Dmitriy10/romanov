@@ -3809,7 +3809,7 @@ a.footer__down-tex {
     flex: 0 1 calc((100% - 10px) / 2);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 350px) {
   .partners__card {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
@@ -3832,6 +3832,19 @@ a.footer__down-tex {
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .partners__img-wrap {
+    border-radius: 16px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-img {
+    border-radius: 16px;
+    width: 105px;
+  }
 }
 
 .partners__card-title {
