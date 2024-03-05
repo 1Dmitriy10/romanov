@@ -4069,6 +4069,7 @@ input::-webkit-input-placeholder {
   color: var(--placeholder);
   line-height: var(--lh-120);
   letter-spacing: -0.06em;
+  color: grey;
 }
 
 input::-moz-placeholder {
@@ -4078,6 +4079,7 @@ input::-moz-placeholder {
   color: var(--placeholder);
   line-height: var(--lh-120);
   letter-spacing: -0.06em;
+  color: grey;
 }
 
 input:-ms-input-placeholder {
@@ -4087,6 +4089,7 @@ input:-ms-input-placeholder {
   color: var(--placeholder);
   line-height: var(--lh-120);
   letter-spacing: -0.06em;
+  color: grey;
 }
 
 input::-ms-input-placeholder {
@@ -4096,6 +4099,7 @@ input::-ms-input-placeholder {
   color: var(--placeholder);
   line-height: var(--lh-120);
   letter-spacing: -0.06em;
+  color: grey;
 }
 
 input::placeholder {
@@ -4105,6 +4109,7 @@ input::placeholder {
   color: var(--placeholder);
   line-height: var(--lh-120);
   letter-spacing: -0.06em;
+  color: grey;
 }
 
 .form__label {

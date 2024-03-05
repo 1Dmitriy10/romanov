@@ -105,6 +105,7 @@ input::placeholder {
     font-family: var(--ff-text);
     @include font(var(--fw-400), var(--fs-16), var(--placeholder), var(--lh-120));
     letter-spacing: -0.06em;
+    color: grey;
 }
 ._req {
 }
