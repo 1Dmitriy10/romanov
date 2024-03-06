@@ -24,6 +24,9 @@ main {
     @include respond-to("tab") {
         gap: 120px;
     }
+    & > section.breadcrabs {
+        gap: 0;
+    }
 }
 svg {
     transition: 0.3s;
@@ -59,3 +62,5 @@ section {
 @import "./components/help";
 @import "./components/articles";
 @import "./components/info";
+@import "./components/breadcrumbs";
+@import "./components/header-bg";

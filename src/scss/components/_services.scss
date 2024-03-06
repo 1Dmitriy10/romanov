@@ -32,3 +32,44 @@
         display: flex;
     }
 }
+.servisec-card-price {
+    @include font(var(--fw-600), var(--fs-18), var(--green), var(--lh-130));
+    letter-spacing: -0.06em;
+    padding-bottom: 10px;
+    @include respond-to("tab") {
+        font-size: var(--fs-14);
+        line-height: var(--lh-120);
+        padding-bottom: 8px;
+    }
+}
+.services-page__title {
+    font-family: var(--ff-title);
+    @include font(var(--fw-400), var(--fs-44), var(--primary-black), var(--lh-120));
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @include respond-to("tab") {
+        font-size: var(--fs-28);
+        margin-bottom: 26px;
+    }
+}
+.services-pool__container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.services-page__subtitle {
+    font-family: var(--ff-title);
+    @include font(var(--fw-400), var(--fs-36), var(--primary-black), var(--lh-125));
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include respond-to("tab") {
+        font-size: var(--fs-20);
+        margin-bottom: 16px;
+        letter-spacing: -0.1em;
+    }
+}
+.servic-box_no-gap {
+    margin-top: -50px;
+}
