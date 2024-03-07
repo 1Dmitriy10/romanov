@@ -1,0 +1,58 @@
+section.know {
+    padding: 0;
+}
+.know__container {
+    display: flex;
+    flex-direction: column;
+}
+.know__title {
+}
+.know__card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include respond-to("tab") {
+        gap: 15px;
+    }
+}
+.know__card {
+    flex: 0 1 calc((100% - 30px) / 2);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--btn-banner);
+    position: relative;
+    padding: 45px 35px;
+    border-radius: 18px;
+    overflow: hidden;
+    @include respond-to("nout") {
+        flex: 0 1 100%;
+    }
+}
+.know-card-bg-icon {
+    position: absolute;
+    width: 148px;
+    height: 148px;
+    top: -50px;
+    right: -40px;
+    object-fit: cover;
+    @include respond-to("tab") {
+        width: 102.04px;
+        height: 102.04px;
+    }
+}
+.know__card-title {
+    @include font(var(--fw-500), var(--fs-20), var(--primary-beige), var(--lh-135));
+    letter-spacing: -0.06em;
+    margin-bottom: 10px;
+    @include respond-to("tab") {
+        font-size: var(--fs-16);
+        margin-bottom: 8px;
+    }
+}
+.know__card-text {
+    @include font(var(--fw-400), var(--fs-18), var(--primary-beige), var(--lh-130));
+    letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        font-size: var(--fs-14);
+    }
+}

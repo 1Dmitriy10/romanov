@@ -1,0 +1,116 @@
+.special {
+}
+.special__container {
+    display: flex;
+    flex-direction: column;
+}
+.special__title {
+    @include respond-to("tab") {
+        font-size: var(--fs-30);
+    }
+}
+.special__content-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 55px 36px;
+    position: relative;
+    @include respond-to("tab") {
+        padding: 50px 23px;
+    }
+}
+.special__content-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.special__content-bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.special__content-wrap {
+    position: relative;
+    z-index: 2;
+}
+.special__content-title {
+    font-family: var(--ff-title);
+    @include font(var(--fw-500), var(--fs-44), var(--primary-beige), var(--lh-120));
+    margin-bottom: 10px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    @include respond-to("tab") {
+        font-size: var(--fs-30);
+        font-weight: var(--fw-400);
+    }
+}
+.special__content-subtitle {
+    @include font(var(--fw-400), var(--fs-20), var(--primary-beige), var(--lh-135));
+    margin-bottom: 30px;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    @include respond-to("tab") {
+        font-size: var(--fs-14);
+        margin-bottom: 5px;
+    }
+}
+.special__span {
+    @include font(var(--fw-400), var(--fs-18), var(--primary-beige), var(--lh-130));
+    margin-bottom: 10px;
+    letter-spacing: -0.06em;
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+.special__price-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 34px;
+    @include respond-to("tab") {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+}
+.special__price {
+    font-family: var(--ff-title);
+    @include font(var(--fw-600), var(--fs-44), var(--primary-beige), var(--lh-120));
+    letter-spacing: -0.08em;
+    @include respond-to("tab") {
+        font-size: var(--fs-34);
+        font-weight: var(--fw-400);
+    }
+}
+.special__old-price {
+    @include font(var(--fw-400), var(--fs-18), var(--primary-beige), var(--lh-130));
+    letter-spacing: -0.06em;
+    text-decoration-line: line-through;
+    margin-top: 15px;
+    @include respond-to("tab") {
+        font-size: var(--fs-14);
+        margin-top: 5px;
+    }
+}
+.special__btn {
+    min-width: 278px;
+    border-radius: 10px;
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+.special__btn-mob {
+    display: none;
+    @include respond-to("tab") {
+        display: flex;
+        width: fit-content;
+    }
+}
